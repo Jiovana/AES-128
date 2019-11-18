@@ -1,0 +1,2947 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/23/2019 16:58:26"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    topo
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module topo_vlg_sample_tst(
+	clk_m,
+	reset_m,
+	sampler_tx
+);
+input  clk_m;
+input  reset_m;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk_m or reset_m)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module topo_vlg_check_tst (
+	chipher,
+	en_c,
+	en_r,
+	en_ra,
+	en_t,
+	round_m,
+	sel_m,
+	sel_m3,
+	state,
+	sampler_rx
+);
+input [127:0] chipher;
+input  en_c;
+input  en_r;
+input  en_ra;
+input  en_t;
+input [3:0] round_m;
+input  sel_m;
+input  sel_m3;
+input [2:0] state;
+input sampler_rx;
+
+reg [127:0] chipher_expected;
+reg  en_c_expected;
+reg  en_r_expected;
+reg  en_ra_expected;
+reg  en_t_expected;
+reg [3:0] round_m_expected;
+reg  sel_m_expected;
+reg  sel_m3_expected;
+reg [2:0] state_expected;
+
+reg [127:0] chipher_prev;
+reg  en_c_prev;
+reg  en_r_prev;
+reg  en_ra_prev;
+reg  en_t_prev;
+reg [3:0] round_m_prev;
+reg  sel_m_prev;
+reg  sel_m3_prev;
+reg [2:0] state_prev;
+
+reg [127:0] chipher_expected_prev;
+reg  en_c_expected_prev;
+reg  en_r_expected_prev;
+reg  en_ra_expected_prev;
+reg  en_t_expected_prev;
+reg [3:0] round_m_expected_prev;
+reg  sel_m_expected_prev;
+reg  sel_m3_expected_prev;
+reg [2:0] state_expected_prev;
+
+reg [127:0] last_chipher_exp;
+reg  last_en_c_exp;
+reg  last_en_r_exp;
+reg  last_en_ra_exp;
+reg  last_en_t_exp;
+reg [3:0] last_round_m_exp;
+reg  last_sel_m_exp;
+reg  last_sel_m3_exp;
+reg [2:0] last_state_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:9] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 9'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	chipher_prev = chipher;
+	en_c_prev = en_c;
+	en_r_prev = en_r;
+	en_ra_prev = en_ra;
+	en_t_prev = en_t;
+	round_m_prev = round_m;
+	sel_m_prev = sel_m;
+	sel_m3_prev = sel_m3;
+	state_prev = state;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	chipher_expected_prev = chipher_expected;
+	en_c_expected_prev = en_c_expected;
+	en_r_expected_prev = en_r_expected;
+	en_ra_expected_prev = en_ra_expected;
+	en_t_expected_prev = en_t_expected;
+	round_m_expected_prev = round_m_expected;
+	sel_m_expected_prev = sel_m_expected;
+	sel_m3_expected_prev = sel_m3_expected;
+	state_expected_prev = state_expected;
+end
+
+
+// expected chipher[ 127 ]
+initial
+begin
+	chipher_expected[127] = 1'bX;
+	chipher_expected[127] = #2999000 1'b0;
+end 
+// expected chipher[ 126 ]
+initial
+begin
+	chipher_expected[126] = 1'bX;
+	chipher_expected[126] = #2999000 1'b0;
+end 
+// expected chipher[ 125 ]
+initial
+begin
+	chipher_expected[125] = 1'bX;
+	chipher_expected[125] = #2999000 1'b0;
+end 
+// expected chipher[ 124 ]
+initial
+begin
+	chipher_expected[124] = 1'bX;
+	chipher_expected[124] = #2999000 1'b0;
+end 
+// expected chipher[ 123 ]
+initial
+begin
+	chipher_expected[123] = 1'bX;
+	chipher_expected[123] = #2999000 1'b0;
+end 
+// expected chipher[ 122 ]
+initial
+begin
+	chipher_expected[122] = 1'bX;
+	chipher_expected[122] = #2999000 1'b0;
+end 
+// expected chipher[ 121 ]
+initial
+begin
+	chipher_expected[121] = 1'bX;
+	chipher_expected[121] = #2999000 1'b0;
+end 
+// expected chipher[ 120 ]
+initial
+begin
+	chipher_expected[120] = 1'bX;
+	chipher_expected[120] = #2999000 1'b0;
+end 
+// expected chipher[ 119 ]
+initial
+begin
+	chipher_expected[119] = 1'bX;
+	chipher_expected[119] = #2999000 1'b0;
+end 
+// expected chipher[ 118 ]
+initial
+begin
+	chipher_expected[118] = 1'bX;
+	chipher_expected[118] = #2999000 1'b0;
+end 
+// expected chipher[ 117 ]
+initial
+begin
+	chipher_expected[117] = 1'bX;
+	chipher_expected[117] = #2999000 1'b0;
+end 
+// expected chipher[ 116 ]
+initial
+begin
+	chipher_expected[116] = 1'bX;
+	chipher_expected[116] = #2999000 1'b0;
+end 
+// expected chipher[ 115 ]
+initial
+begin
+	chipher_expected[115] = 1'bX;
+	chipher_expected[115] = #2999000 1'b0;
+end 
+// expected chipher[ 114 ]
+initial
+begin
+	chipher_expected[114] = 1'bX;
+	chipher_expected[114] = #2999000 1'b0;
+end 
+// expected chipher[ 113 ]
+initial
+begin
+	chipher_expected[113] = 1'bX;
+	chipher_expected[113] = #2999000 1'b0;
+end 
+// expected chipher[ 112 ]
+initial
+begin
+	chipher_expected[112] = 1'bX;
+	chipher_expected[112] = #2999000 1'b0;
+end 
+// expected chipher[ 111 ]
+initial
+begin
+	chipher_expected[111] = 1'bX;
+	chipher_expected[111] = #2999000 1'b0;
+end 
+// expected chipher[ 110 ]
+initial
+begin
+	chipher_expected[110] = 1'bX;
+	chipher_expected[110] = #2999000 1'b0;
+end 
+// expected chipher[ 109 ]
+initial
+begin
+	chipher_expected[109] = 1'bX;
+	chipher_expected[109] = #2999000 1'b0;
+end 
+// expected chipher[ 108 ]
+initial
+begin
+	chipher_expected[108] = 1'bX;
+	chipher_expected[108] = #2999000 1'b0;
+end 
+// expected chipher[ 107 ]
+initial
+begin
+	chipher_expected[107] = 1'bX;
+	chipher_expected[107] = #2999000 1'b0;
+end 
+// expected chipher[ 106 ]
+initial
+begin
+	chipher_expected[106] = 1'bX;
+	chipher_expected[106] = #2999000 1'b0;
+end 
+// expected chipher[ 105 ]
+initial
+begin
+	chipher_expected[105] = 1'bX;
+	chipher_expected[105] = #2999000 1'b0;
+end 
+// expected chipher[ 104 ]
+initial
+begin
+	chipher_expected[104] = 1'bX;
+	chipher_expected[104] = #2999000 1'b0;
+end 
+// expected chipher[ 103 ]
+initial
+begin
+	chipher_expected[103] = 1'bX;
+	chipher_expected[103] = #2999000 1'b0;
+end 
+// expected chipher[ 102 ]
+initial
+begin
+	chipher_expected[102] = 1'bX;
+	chipher_expected[102] = #2999000 1'b0;
+end 
+// expected chipher[ 101 ]
+initial
+begin
+	chipher_expected[101] = 1'bX;
+	chipher_expected[101] = #2999000 1'b0;
+end 
+// expected chipher[ 100 ]
+initial
+begin
+	chipher_expected[100] = 1'bX;
+	chipher_expected[100] = #2999000 1'b0;
+end 
+// expected chipher[ 99 ]
+initial
+begin
+	chipher_expected[99] = 1'bX;
+	chipher_expected[99] = #2999000 1'b0;
+end 
+// expected chipher[ 98 ]
+initial
+begin
+	chipher_expected[98] = 1'bX;
+	chipher_expected[98] = #2999000 1'b0;
+end 
+// expected chipher[ 97 ]
+initial
+begin
+	chipher_expected[97] = 1'bX;
+	chipher_expected[97] = #2999000 1'b0;
+end 
+// expected chipher[ 96 ]
+initial
+begin
+	chipher_expected[96] = 1'bX;
+	chipher_expected[96] = #2999000 1'b0;
+end 
+// expected chipher[ 95 ]
+initial
+begin
+	chipher_expected[95] = 1'bX;
+	chipher_expected[95] = #2999000 1'b0;
+end 
+// expected chipher[ 94 ]
+initial
+begin
+	chipher_expected[94] = 1'bX;
+	chipher_expected[94] = #2999000 1'b0;
+end 
+// expected chipher[ 93 ]
+initial
+begin
+	chipher_expected[93] = 1'bX;
+	chipher_expected[93] = #2999000 1'b0;
+end 
+// expected chipher[ 92 ]
+initial
+begin
+	chipher_expected[92] = 1'bX;
+	chipher_expected[92] = #2999000 1'b0;
+end 
+// expected chipher[ 91 ]
+initial
+begin
+	chipher_expected[91] = 1'bX;
+	chipher_expected[91] = #2999000 1'b0;
+end 
+// expected chipher[ 90 ]
+initial
+begin
+	chipher_expected[90] = 1'bX;
+	chipher_expected[90] = #2999000 1'b0;
+end 
+// expected chipher[ 89 ]
+initial
+begin
+	chipher_expected[89] = 1'bX;
+	chipher_expected[89] = #2999000 1'b0;
+end 
+// expected chipher[ 88 ]
+initial
+begin
+	chipher_expected[88] = 1'bX;
+	chipher_expected[88] = #2999000 1'b0;
+end 
+// expected chipher[ 87 ]
+initial
+begin
+	chipher_expected[87] = 1'bX;
+	chipher_expected[87] = #2999000 1'b0;
+end 
+// expected chipher[ 86 ]
+initial
+begin
+	chipher_expected[86] = 1'bX;
+	chipher_expected[86] = #2999000 1'b0;
+end 
+// expected chipher[ 85 ]
+initial
+begin
+	chipher_expected[85] = 1'bX;
+	chipher_expected[85] = #2999000 1'b0;
+end 
+// expected chipher[ 84 ]
+initial
+begin
+	chipher_expected[84] = 1'bX;
+	chipher_expected[84] = #2999000 1'b0;
+end 
+// expected chipher[ 83 ]
+initial
+begin
+	chipher_expected[83] = 1'bX;
+	chipher_expected[83] = #2999000 1'b0;
+end 
+// expected chipher[ 82 ]
+initial
+begin
+	chipher_expected[82] = 1'bX;
+	chipher_expected[82] = #2999000 1'b0;
+end 
+// expected chipher[ 81 ]
+initial
+begin
+	chipher_expected[81] = 1'bX;
+	chipher_expected[81] = #2999000 1'b0;
+end 
+// expected chipher[ 80 ]
+initial
+begin
+	chipher_expected[80] = 1'bX;
+	chipher_expected[80] = #2999000 1'b0;
+end 
+// expected chipher[ 79 ]
+initial
+begin
+	chipher_expected[79] = 1'bX;
+	chipher_expected[79] = #2999000 1'b0;
+end 
+// expected chipher[ 78 ]
+initial
+begin
+	chipher_expected[78] = 1'bX;
+	chipher_expected[78] = #2999000 1'b0;
+end 
+// expected chipher[ 77 ]
+initial
+begin
+	chipher_expected[77] = 1'bX;
+	chipher_expected[77] = #2999000 1'b0;
+end 
+// expected chipher[ 76 ]
+initial
+begin
+	chipher_expected[76] = 1'bX;
+	chipher_expected[76] = #2999000 1'b0;
+end 
+// expected chipher[ 75 ]
+initial
+begin
+	chipher_expected[75] = 1'bX;
+	chipher_expected[75] = #2999000 1'b0;
+end 
+// expected chipher[ 74 ]
+initial
+begin
+	chipher_expected[74] = 1'bX;
+	chipher_expected[74] = #2999000 1'b0;
+end 
+// expected chipher[ 73 ]
+initial
+begin
+	chipher_expected[73] = 1'bX;
+	chipher_expected[73] = #2999000 1'b0;
+end 
+// expected chipher[ 72 ]
+initial
+begin
+	chipher_expected[72] = 1'bX;
+	chipher_expected[72] = #2999000 1'b0;
+end 
+// expected chipher[ 71 ]
+initial
+begin
+	chipher_expected[71] = 1'bX;
+	chipher_expected[71] = #2999000 1'b0;
+end 
+// expected chipher[ 70 ]
+initial
+begin
+	chipher_expected[70] = 1'bX;
+	chipher_expected[70] = #2999000 1'b0;
+end 
+// expected chipher[ 69 ]
+initial
+begin
+	chipher_expected[69] = 1'bX;
+	chipher_expected[69] = #2999000 1'b0;
+end 
+// expected chipher[ 68 ]
+initial
+begin
+	chipher_expected[68] = 1'bX;
+	chipher_expected[68] = #2999000 1'b0;
+end 
+// expected chipher[ 67 ]
+initial
+begin
+	chipher_expected[67] = 1'bX;
+	chipher_expected[67] = #2999000 1'b0;
+end 
+// expected chipher[ 66 ]
+initial
+begin
+	chipher_expected[66] = 1'bX;
+	chipher_expected[66] = #2999000 1'b0;
+end 
+// expected chipher[ 65 ]
+initial
+begin
+	chipher_expected[65] = 1'bX;
+	chipher_expected[65] = #2999000 1'b0;
+end 
+// expected chipher[ 64 ]
+initial
+begin
+	chipher_expected[64] = 1'bX;
+	chipher_expected[64] = #2999000 1'b0;
+end 
+// expected chipher[ 63 ]
+initial
+begin
+	chipher_expected[63] = 1'bX;
+	chipher_expected[63] = #2999000 1'b0;
+end 
+// expected chipher[ 62 ]
+initial
+begin
+	chipher_expected[62] = 1'bX;
+	chipher_expected[62] = #2999000 1'b0;
+end 
+// expected chipher[ 61 ]
+initial
+begin
+	chipher_expected[61] = 1'bX;
+	chipher_expected[61] = #2999000 1'b0;
+end 
+// expected chipher[ 60 ]
+initial
+begin
+	chipher_expected[60] = 1'bX;
+	chipher_expected[60] = #2999000 1'b0;
+end 
+// expected chipher[ 59 ]
+initial
+begin
+	chipher_expected[59] = 1'bX;
+	chipher_expected[59] = #2999000 1'b0;
+end 
+// expected chipher[ 58 ]
+initial
+begin
+	chipher_expected[58] = 1'bX;
+	chipher_expected[58] = #2999000 1'b0;
+end 
+// expected chipher[ 57 ]
+initial
+begin
+	chipher_expected[57] = 1'bX;
+	chipher_expected[57] = #2999000 1'b0;
+end 
+// expected chipher[ 56 ]
+initial
+begin
+	chipher_expected[56] = 1'bX;
+	chipher_expected[56] = #2999000 1'b0;
+end 
+// expected chipher[ 55 ]
+initial
+begin
+	chipher_expected[55] = 1'bX;
+	chipher_expected[55] = #2999000 1'b0;
+end 
+// expected chipher[ 54 ]
+initial
+begin
+	chipher_expected[54] = 1'bX;
+	chipher_expected[54] = #2999000 1'b0;
+end 
+// expected chipher[ 53 ]
+initial
+begin
+	chipher_expected[53] = 1'bX;
+	chipher_expected[53] = #2999000 1'b0;
+end 
+// expected chipher[ 52 ]
+initial
+begin
+	chipher_expected[52] = 1'bX;
+	chipher_expected[52] = #2999000 1'b0;
+end 
+// expected chipher[ 51 ]
+initial
+begin
+	chipher_expected[51] = 1'bX;
+	chipher_expected[51] = #2999000 1'b0;
+end 
+// expected chipher[ 50 ]
+initial
+begin
+	chipher_expected[50] = 1'bX;
+	chipher_expected[50] = #2999000 1'b0;
+end 
+// expected chipher[ 49 ]
+initial
+begin
+	chipher_expected[49] = 1'bX;
+	chipher_expected[49] = #2999000 1'b0;
+end 
+// expected chipher[ 48 ]
+initial
+begin
+	chipher_expected[48] = 1'bX;
+	chipher_expected[48] = #2999000 1'b0;
+end 
+// expected chipher[ 47 ]
+initial
+begin
+	chipher_expected[47] = 1'bX;
+	chipher_expected[47] = #2999000 1'b0;
+end 
+// expected chipher[ 46 ]
+initial
+begin
+	chipher_expected[46] = 1'bX;
+	chipher_expected[46] = #2999000 1'b0;
+end 
+// expected chipher[ 45 ]
+initial
+begin
+	chipher_expected[45] = 1'bX;
+	chipher_expected[45] = #2999000 1'b0;
+end 
+// expected chipher[ 44 ]
+initial
+begin
+	chipher_expected[44] = 1'bX;
+	chipher_expected[44] = #2999000 1'b0;
+end 
+// expected chipher[ 43 ]
+initial
+begin
+	chipher_expected[43] = 1'bX;
+	chipher_expected[43] = #2999000 1'b0;
+end 
+// expected chipher[ 42 ]
+initial
+begin
+	chipher_expected[42] = 1'bX;
+	chipher_expected[42] = #2999000 1'b0;
+end 
+// expected chipher[ 41 ]
+initial
+begin
+	chipher_expected[41] = 1'bX;
+	chipher_expected[41] = #2999000 1'b0;
+end 
+// expected chipher[ 40 ]
+initial
+begin
+	chipher_expected[40] = 1'bX;
+	chipher_expected[40] = #2999000 1'b0;
+end 
+// expected chipher[ 39 ]
+initial
+begin
+	chipher_expected[39] = 1'bX;
+	chipher_expected[39] = #2999000 1'b0;
+end 
+// expected chipher[ 38 ]
+initial
+begin
+	chipher_expected[38] = 1'bX;
+	chipher_expected[38] = #2999000 1'b0;
+end 
+// expected chipher[ 37 ]
+initial
+begin
+	chipher_expected[37] = 1'bX;
+	chipher_expected[37] = #2999000 1'b0;
+end 
+// expected chipher[ 36 ]
+initial
+begin
+	chipher_expected[36] = 1'bX;
+	chipher_expected[36] = #2999000 1'b0;
+end 
+// expected chipher[ 35 ]
+initial
+begin
+	chipher_expected[35] = 1'bX;
+	chipher_expected[35] = #2999000 1'b0;
+end 
+// expected chipher[ 34 ]
+initial
+begin
+	chipher_expected[34] = 1'bX;
+	chipher_expected[34] = #2999000 1'b0;
+end 
+// expected chipher[ 33 ]
+initial
+begin
+	chipher_expected[33] = 1'bX;
+	chipher_expected[33] = #2999000 1'b0;
+end 
+// expected chipher[ 32 ]
+initial
+begin
+	chipher_expected[32] = 1'bX;
+	chipher_expected[32] = #2999000 1'b0;
+end 
+// expected chipher[ 31 ]
+initial
+begin
+	chipher_expected[31] = 1'bX;
+	chipher_expected[31] = #2999000 1'b0;
+end 
+// expected chipher[ 30 ]
+initial
+begin
+	chipher_expected[30] = 1'bX;
+	chipher_expected[30] = #2999000 1'b0;
+end 
+// expected chipher[ 29 ]
+initial
+begin
+	chipher_expected[29] = 1'bX;
+	chipher_expected[29] = #2999000 1'b0;
+end 
+// expected chipher[ 28 ]
+initial
+begin
+	chipher_expected[28] = 1'bX;
+	chipher_expected[28] = #2999000 1'b0;
+end 
+// expected chipher[ 27 ]
+initial
+begin
+	chipher_expected[27] = 1'bX;
+	chipher_expected[27] = #2999000 1'b0;
+end 
+// expected chipher[ 26 ]
+initial
+begin
+	chipher_expected[26] = 1'bX;
+	chipher_expected[26] = #2999000 1'b0;
+end 
+// expected chipher[ 25 ]
+initial
+begin
+	chipher_expected[25] = 1'bX;
+	chipher_expected[25] = #2999000 1'b0;
+end 
+// expected chipher[ 24 ]
+initial
+begin
+	chipher_expected[24] = 1'bX;
+	chipher_expected[24] = #2999000 1'b0;
+end 
+// expected chipher[ 23 ]
+initial
+begin
+	chipher_expected[23] = 1'bX;
+	chipher_expected[23] = #2999000 1'b0;
+end 
+// expected chipher[ 22 ]
+initial
+begin
+	chipher_expected[22] = 1'bX;
+	chipher_expected[22] = #2999000 1'b0;
+end 
+// expected chipher[ 21 ]
+initial
+begin
+	chipher_expected[21] = 1'bX;
+	chipher_expected[21] = #2999000 1'b0;
+end 
+// expected chipher[ 20 ]
+initial
+begin
+	chipher_expected[20] = 1'bX;
+	chipher_expected[20] = #2999000 1'b0;
+end 
+// expected chipher[ 19 ]
+initial
+begin
+	chipher_expected[19] = 1'bX;
+	chipher_expected[19] = #2999000 1'b0;
+end 
+// expected chipher[ 18 ]
+initial
+begin
+	chipher_expected[18] = 1'bX;
+	chipher_expected[18] = #2999000 1'b0;
+end 
+// expected chipher[ 17 ]
+initial
+begin
+	chipher_expected[17] = 1'bX;
+	chipher_expected[17] = #2999000 1'b0;
+end 
+// expected chipher[ 16 ]
+initial
+begin
+	chipher_expected[16] = 1'bX;
+	chipher_expected[16] = #2999000 1'b0;
+end 
+// expected chipher[ 15 ]
+initial
+begin
+	chipher_expected[15] = 1'bX;
+	chipher_expected[15] = #2999000 1'b0;
+end 
+// expected chipher[ 14 ]
+initial
+begin
+	chipher_expected[14] = 1'bX;
+	chipher_expected[14] = #2999000 1'b0;
+end 
+// expected chipher[ 13 ]
+initial
+begin
+	chipher_expected[13] = 1'bX;
+	chipher_expected[13] = #2999000 1'b0;
+end 
+// expected chipher[ 12 ]
+initial
+begin
+	chipher_expected[12] = 1'bX;
+	chipher_expected[12] = #2999000 1'b0;
+end 
+// expected chipher[ 11 ]
+initial
+begin
+	chipher_expected[11] = 1'bX;
+	chipher_expected[11] = #2999000 1'b0;
+end 
+// expected chipher[ 10 ]
+initial
+begin
+	chipher_expected[10] = 1'bX;
+	chipher_expected[10] = #2999000 1'b0;
+end 
+// expected chipher[ 9 ]
+initial
+begin
+	chipher_expected[9] = 1'bX;
+	chipher_expected[9] = #2999000 1'b0;
+end 
+// expected chipher[ 8 ]
+initial
+begin
+	chipher_expected[8] = 1'bX;
+	chipher_expected[8] = #2999000 1'b0;
+end 
+// expected chipher[ 7 ]
+initial
+begin
+	chipher_expected[7] = 1'bX;
+	chipher_expected[7] = #2999000 1'b0;
+end 
+// expected chipher[ 6 ]
+initial
+begin
+	chipher_expected[6] = 1'bX;
+	chipher_expected[6] = #2999000 1'b0;
+end 
+// expected chipher[ 5 ]
+initial
+begin
+	chipher_expected[5] = 1'bX;
+	chipher_expected[5] = #2999000 1'b0;
+end 
+// expected chipher[ 4 ]
+initial
+begin
+	chipher_expected[4] = 1'bX;
+	chipher_expected[4] = #2999000 1'b0;
+end 
+// expected chipher[ 3 ]
+initial
+begin
+	chipher_expected[3] = 1'bX;
+	chipher_expected[3] = #2999000 1'b0;
+end 
+// expected chipher[ 2 ]
+initial
+begin
+	chipher_expected[2] = 1'bX;
+	chipher_expected[2] = #2999000 1'b0;
+end 
+// expected chipher[ 1 ]
+initial
+begin
+	chipher_expected[1] = 1'bX;
+	chipher_expected[1] = #2999000 1'b0;
+end 
+// expected chipher[ 0 ]
+initial
+begin
+	chipher_expected[0] = 1'bX;
+	chipher_expected[0] = #2999000 1'b0;
+end 
+// expected round_m[ 3 ]
+initial
+begin
+	round_m_expected[3] = 1'b0;
+end 
+// expected round_m[ 2 ]
+initial
+begin
+	round_m_expected[2] = 1'b0;
+end 
+// expected round_m[ 1 ]
+initial
+begin
+	round_m_expected[1] = 1'b0;
+end 
+// expected round_m[ 0 ]
+initial
+begin
+	round_m_expected[0] = 1'b0;
+end 
+
+// expected en_c
+initial
+begin
+	en_c_expected = 1'bX;
+	en_c_expected = #2999000 1'b0;
+end 
+
+// expected en_r
+initial
+begin
+	en_r_expected = 1'bX;
+	en_r_expected = #2999000 1'b0;
+end 
+
+// expected en_t
+initial
+begin
+	en_t_expected = 1'bX;
+	en_t_expected = #2999000 1'b0;
+end 
+
+// expected en_ra
+initial
+begin
+	en_ra_expected = 1'bX;
+end 
+
+// expected sel_m
+initial
+begin
+	sel_m_expected = 1'bX;
+	sel_m_expected = #2999000 1'b0;
+end 
+
+// expected sel_m3
+initial
+begin
+	sel_m3_expected = 1'bX;
+	sel_m3_expected = #2999000 1'b0;
+end 
+// expected state[ 2 ]
+initial
+begin
+	state_expected[2] = 1'bX;
+	state_expected[2] = #2999000 1'b0;
+end 
+// expected state[ 1 ]
+initial
+begin
+	state_expected[1] = 1'bX;
+	state_expected[1] = #2999000 1'b0;
+end 
+// expected state[ 0 ]
+initial
+begin
+	state_expected[0] = 1'bX;
+	state_expected[0] = #2999000 1'b0;
+end 
+// generate trigger
+always @(chipher_expected or chipher or en_c_expected or en_c or en_r_expected or en_r or en_ra_expected or en_ra or en_t_expected or en_t or round_m_expected or round_m or sel_m_expected or sel_m or sel_m3_expected or sel_m3 or state_expected or state)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected chipher = %b | expected en_c = %b | expected en_r = %b | expected en_ra = %b | expected en_t = %b | expected round_m = %b | expected sel_m = %b | expected sel_m3 = %b | expected state = %b | ",chipher_expected_prev,en_c_expected_prev,en_r_expected_prev,en_ra_expected_prev,en_t_expected_prev,round_m_expected_prev,sel_m_expected_prev,sel_m3_expected_prev,state_expected_prev);
+	$display("| real chipher = %b | real en_c = %b | real en_r = %b | real en_ra = %b | real en_t = %b | real round_m = %b | real sel_m = %b | real sel_m3 = %b | real state = %b | ",chipher_prev,en_c_prev,en_r_prev,en_ra_prev,en_t_prev,round_m_prev,sel_m_prev,sel_m3_prev,state_prev);
+`endif
+	if (
+		( chipher_expected_prev[0] !== 1'bx ) && ( chipher_prev[0] !== chipher_expected_prev[0] )
+		&& ((chipher_expected_prev[0] !== last_chipher_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[0] = chipher_expected_prev[0];
+	end
+	if (
+		( chipher_expected_prev[1] !== 1'bx ) && ( chipher_prev[1] !== chipher_expected_prev[1] )
+		&& ((chipher_expected_prev[1] !== last_chipher_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[1] = chipher_expected_prev[1];
+	end
+	if (
+		( chipher_expected_prev[2] !== 1'bx ) && ( chipher_prev[2] !== chipher_expected_prev[2] )
+		&& ((chipher_expected_prev[2] !== last_chipher_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[2] = chipher_expected_prev[2];
+	end
+	if (
+		( chipher_expected_prev[3] !== 1'bx ) && ( chipher_prev[3] !== chipher_expected_prev[3] )
+		&& ((chipher_expected_prev[3] !== last_chipher_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[3] = chipher_expected_prev[3];
+	end
+	if (
+		( chipher_expected_prev[4] !== 1'bx ) && ( chipher_prev[4] !== chipher_expected_prev[4] )
+		&& ((chipher_expected_prev[4] !== last_chipher_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[4] = chipher_expected_prev[4];
+	end
+	if (
+		( chipher_expected_prev[5] !== 1'bx ) && ( chipher_prev[5] !== chipher_expected_prev[5] )
+		&& ((chipher_expected_prev[5] !== last_chipher_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[5] = chipher_expected_prev[5];
+	end
+	if (
+		( chipher_expected_prev[6] !== 1'bx ) && ( chipher_prev[6] !== chipher_expected_prev[6] )
+		&& ((chipher_expected_prev[6] !== last_chipher_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[6] = chipher_expected_prev[6];
+	end
+	if (
+		( chipher_expected_prev[7] !== 1'bx ) && ( chipher_prev[7] !== chipher_expected_prev[7] )
+		&& ((chipher_expected_prev[7] !== last_chipher_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[7] = chipher_expected_prev[7];
+	end
+	if (
+		( chipher_expected_prev[8] !== 1'bx ) && ( chipher_prev[8] !== chipher_expected_prev[8] )
+		&& ((chipher_expected_prev[8] !== last_chipher_exp[8]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[8] = chipher_expected_prev[8];
+	end
+	if (
+		( chipher_expected_prev[9] !== 1'bx ) && ( chipher_prev[9] !== chipher_expected_prev[9] )
+		&& ((chipher_expected_prev[9] !== last_chipher_exp[9]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[9] = chipher_expected_prev[9];
+	end
+	if (
+		( chipher_expected_prev[10] !== 1'bx ) && ( chipher_prev[10] !== chipher_expected_prev[10] )
+		&& ((chipher_expected_prev[10] !== last_chipher_exp[10]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[10] = chipher_expected_prev[10];
+	end
+	if (
+		( chipher_expected_prev[11] !== 1'bx ) && ( chipher_prev[11] !== chipher_expected_prev[11] )
+		&& ((chipher_expected_prev[11] !== last_chipher_exp[11]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[11] = chipher_expected_prev[11];
+	end
+	if (
+		( chipher_expected_prev[12] !== 1'bx ) && ( chipher_prev[12] !== chipher_expected_prev[12] )
+		&& ((chipher_expected_prev[12] !== last_chipher_exp[12]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[12] = chipher_expected_prev[12];
+	end
+	if (
+		( chipher_expected_prev[13] !== 1'bx ) && ( chipher_prev[13] !== chipher_expected_prev[13] )
+		&& ((chipher_expected_prev[13] !== last_chipher_exp[13]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[13] = chipher_expected_prev[13];
+	end
+	if (
+		( chipher_expected_prev[14] !== 1'bx ) && ( chipher_prev[14] !== chipher_expected_prev[14] )
+		&& ((chipher_expected_prev[14] !== last_chipher_exp[14]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[14] = chipher_expected_prev[14];
+	end
+	if (
+		( chipher_expected_prev[15] !== 1'bx ) && ( chipher_prev[15] !== chipher_expected_prev[15] )
+		&& ((chipher_expected_prev[15] !== last_chipher_exp[15]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[15] = chipher_expected_prev[15];
+	end
+	if (
+		( chipher_expected_prev[16] !== 1'bx ) && ( chipher_prev[16] !== chipher_expected_prev[16] )
+		&& ((chipher_expected_prev[16] !== last_chipher_exp[16]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[16] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[16] = chipher_expected_prev[16];
+	end
+	if (
+		( chipher_expected_prev[17] !== 1'bx ) && ( chipher_prev[17] !== chipher_expected_prev[17] )
+		&& ((chipher_expected_prev[17] !== last_chipher_exp[17]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[17] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[17] = chipher_expected_prev[17];
+	end
+	if (
+		( chipher_expected_prev[18] !== 1'bx ) && ( chipher_prev[18] !== chipher_expected_prev[18] )
+		&& ((chipher_expected_prev[18] !== last_chipher_exp[18]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[18] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[18] = chipher_expected_prev[18];
+	end
+	if (
+		( chipher_expected_prev[19] !== 1'bx ) && ( chipher_prev[19] !== chipher_expected_prev[19] )
+		&& ((chipher_expected_prev[19] !== last_chipher_exp[19]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[19] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[19] = chipher_expected_prev[19];
+	end
+	if (
+		( chipher_expected_prev[20] !== 1'bx ) && ( chipher_prev[20] !== chipher_expected_prev[20] )
+		&& ((chipher_expected_prev[20] !== last_chipher_exp[20]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[20] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[20] = chipher_expected_prev[20];
+	end
+	if (
+		( chipher_expected_prev[21] !== 1'bx ) && ( chipher_prev[21] !== chipher_expected_prev[21] )
+		&& ((chipher_expected_prev[21] !== last_chipher_exp[21]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[21] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[21] = chipher_expected_prev[21];
+	end
+	if (
+		( chipher_expected_prev[22] !== 1'bx ) && ( chipher_prev[22] !== chipher_expected_prev[22] )
+		&& ((chipher_expected_prev[22] !== last_chipher_exp[22]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[22] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[22] = chipher_expected_prev[22];
+	end
+	if (
+		( chipher_expected_prev[23] !== 1'bx ) && ( chipher_prev[23] !== chipher_expected_prev[23] )
+		&& ((chipher_expected_prev[23] !== last_chipher_exp[23]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[23] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[23] = chipher_expected_prev[23];
+	end
+	if (
+		( chipher_expected_prev[24] !== 1'bx ) && ( chipher_prev[24] !== chipher_expected_prev[24] )
+		&& ((chipher_expected_prev[24] !== last_chipher_exp[24]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[24] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[24] = chipher_expected_prev[24];
+	end
+	if (
+		( chipher_expected_prev[25] !== 1'bx ) && ( chipher_prev[25] !== chipher_expected_prev[25] )
+		&& ((chipher_expected_prev[25] !== last_chipher_exp[25]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[25] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[25] = chipher_expected_prev[25];
+	end
+	if (
+		( chipher_expected_prev[26] !== 1'bx ) && ( chipher_prev[26] !== chipher_expected_prev[26] )
+		&& ((chipher_expected_prev[26] !== last_chipher_exp[26]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[26] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[26] = chipher_expected_prev[26];
+	end
+	if (
+		( chipher_expected_prev[27] !== 1'bx ) && ( chipher_prev[27] !== chipher_expected_prev[27] )
+		&& ((chipher_expected_prev[27] !== last_chipher_exp[27]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[27] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[27] = chipher_expected_prev[27];
+	end
+	if (
+		( chipher_expected_prev[28] !== 1'bx ) && ( chipher_prev[28] !== chipher_expected_prev[28] )
+		&& ((chipher_expected_prev[28] !== last_chipher_exp[28]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[28] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[28] = chipher_expected_prev[28];
+	end
+	if (
+		( chipher_expected_prev[29] !== 1'bx ) && ( chipher_prev[29] !== chipher_expected_prev[29] )
+		&& ((chipher_expected_prev[29] !== last_chipher_exp[29]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[29] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[29] = chipher_expected_prev[29];
+	end
+	if (
+		( chipher_expected_prev[30] !== 1'bx ) && ( chipher_prev[30] !== chipher_expected_prev[30] )
+		&& ((chipher_expected_prev[30] !== last_chipher_exp[30]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[30] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[30] = chipher_expected_prev[30];
+	end
+	if (
+		( chipher_expected_prev[31] !== 1'bx ) && ( chipher_prev[31] !== chipher_expected_prev[31] )
+		&& ((chipher_expected_prev[31] !== last_chipher_exp[31]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[31] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[31] = chipher_expected_prev[31];
+	end
+	if (
+		( chipher_expected_prev[32] !== 1'bx ) && ( chipher_prev[32] !== chipher_expected_prev[32] )
+		&& ((chipher_expected_prev[32] !== last_chipher_exp[32]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[32] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[32] = chipher_expected_prev[32];
+	end
+	if (
+		( chipher_expected_prev[33] !== 1'bx ) && ( chipher_prev[33] !== chipher_expected_prev[33] )
+		&& ((chipher_expected_prev[33] !== last_chipher_exp[33]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[33] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[33] = chipher_expected_prev[33];
+	end
+	if (
+		( chipher_expected_prev[34] !== 1'bx ) && ( chipher_prev[34] !== chipher_expected_prev[34] )
+		&& ((chipher_expected_prev[34] !== last_chipher_exp[34]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[34] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[34] = chipher_expected_prev[34];
+	end
+	if (
+		( chipher_expected_prev[35] !== 1'bx ) && ( chipher_prev[35] !== chipher_expected_prev[35] )
+		&& ((chipher_expected_prev[35] !== last_chipher_exp[35]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[35] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[35] = chipher_expected_prev[35];
+	end
+	if (
+		( chipher_expected_prev[36] !== 1'bx ) && ( chipher_prev[36] !== chipher_expected_prev[36] )
+		&& ((chipher_expected_prev[36] !== last_chipher_exp[36]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[36] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[36] = chipher_expected_prev[36];
+	end
+	if (
+		( chipher_expected_prev[37] !== 1'bx ) && ( chipher_prev[37] !== chipher_expected_prev[37] )
+		&& ((chipher_expected_prev[37] !== last_chipher_exp[37]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[37] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[37] = chipher_expected_prev[37];
+	end
+	if (
+		( chipher_expected_prev[38] !== 1'bx ) && ( chipher_prev[38] !== chipher_expected_prev[38] )
+		&& ((chipher_expected_prev[38] !== last_chipher_exp[38]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[38] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[38] = chipher_expected_prev[38];
+	end
+	if (
+		( chipher_expected_prev[39] !== 1'bx ) && ( chipher_prev[39] !== chipher_expected_prev[39] )
+		&& ((chipher_expected_prev[39] !== last_chipher_exp[39]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[39] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[39] = chipher_expected_prev[39];
+	end
+	if (
+		( chipher_expected_prev[40] !== 1'bx ) && ( chipher_prev[40] !== chipher_expected_prev[40] )
+		&& ((chipher_expected_prev[40] !== last_chipher_exp[40]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[40] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[40] = chipher_expected_prev[40];
+	end
+	if (
+		( chipher_expected_prev[41] !== 1'bx ) && ( chipher_prev[41] !== chipher_expected_prev[41] )
+		&& ((chipher_expected_prev[41] !== last_chipher_exp[41]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[41] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[41] = chipher_expected_prev[41];
+	end
+	if (
+		( chipher_expected_prev[42] !== 1'bx ) && ( chipher_prev[42] !== chipher_expected_prev[42] )
+		&& ((chipher_expected_prev[42] !== last_chipher_exp[42]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[42] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[42] = chipher_expected_prev[42];
+	end
+	if (
+		( chipher_expected_prev[43] !== 1'bx ) && ( chipher_prev[43] !== chipher_expected_prev[43] )
+		&& ((chipher_expected_prev[43] !== last_chipher_exp[43]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[43] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[43] = chipher_expected_prev[43];
+	end
+	if (
+		( chipher_expected_prev[44] !== 1'bx ) && ( chipher_prev[44] !== chipher_expected_prev[44] )
+		&& ((chipher_expected_prev[44] !== last_chipher_exp[44]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[44] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[44] = chipher_expected_prev[44];
+	end
+	if (
+		( chipher_expected_prev[45] !== 1'bx ) && ( chipher_prev[45] !== chipher_expected_prev[45] )
+		&& ((chipher_expected_prev[45] !== last_chipher_exp[45]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[45] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[45] = chipher_expected_prev[45];
+	end
+	if (
+		( chipher_expected_prev[46] !== 1'bx ) && ( chipher_prev[46] !== chipher_expected_prev[46] )
+		&& ((chipher_expected_prev[46] !== last_chipher_exp[46]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[46] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[46] = chipher_expected_prev[46];
+	end
+	if (
+		( chipher_expected_prev[47] !== 1'bx ) && ( chipher_prev[47] !== chipher_expected_prev[47] )
+		&& ((chipher_expected_prev[47] !== last_chipher_exp[47]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[47] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[47] = chipher_expected_prev[47];
+	end
+	if (
+		( chipher_expected_prev[48] !== 1'bx ) && ( chipher_prev[48] !== chipher_expected_prev[48] )
+		&& ((chipher_expected_prev[48] !== last_chipher_exp[48]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[48] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[48] = chipher_expected_prev[48];
+	end
+	if (
+		( chipher_expected_prev[49] !== 1'bx ) && ( chipher_prev[49] !== chipher_expected_prev[49] )
+		&& ((chipher_expected_prev[49] !== last_chipher_exp[49]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[49] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[49] = chipher_expected_prev[49];
+	end
+	if (
+		( chipher_expected_prev[50] !== 1'bx ) && ( chipher_prev[50] !== chipher_expected_prev[50] )
+		&& ((chipher_expected_prev[50] !== last_chipher_exp[50]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[50] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[50] = chipher_expected_prev[50];
+	end
+	if (
+		( chipher_expected_prev[51] !== 1'bx ) && ( chipher_prev[51] !== chipher_expected_prev[51] )
+		&& ((chipher_expected_prev[51] !== last_chipher_exp[51]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[51] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[51] = chipher_expected_prev[51];
+	end
+	if (
+		( chipher_expected_prev[52] !== 1'bx ) && ( chipher_prev[52] !== chipher_expected_prev[52] )
+		&& ((chipher_expected_prev[52] !== last_chipher_exp[52]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[52] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[52] = chipher_expected_prev[52];
+	end
+	if (
+		( chipher_expected_prev[53] !== 1'bx ) && ( chipher_prev[53] !== chipher_expected_prev[53] )
+		&& ((chipher_expected_prev[53] !== last_chipher_exp[53]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[53] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[53] = chipher_expected_prev[53];
+	end
+	if (
+		( chipher_expected_prev[54] !== 1'bx ) && ( chipher_prev[54] !== chipher_expected_prev[54] )
+		&& ((chipher_expected_prev[54] !== last_chipher_exp[54]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[54] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[54] = chipher_expected_prev[54];
+	end
+	if (
+		( chipher_expected_prev[55] !== 1'bx ) && ( chipher_prev[55] !== chipher_expected_prev[55] )
+		&& ((chipher_expected_prev[55] !== last_chipher_exp[55]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[55] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[55] = chipher_expected_prev[55];
+	end
+	if (
+		( chipher_expected_prev[56] !== 1'bx ) && ( chipher_prev[56] !== chipher_expected_prev[56] )
+		&& ((chipher_expected_prev[56] !== last_chipher_exp[56]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[56] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[56] = chipher_expected_prev[56];
+	end
+	if (
+		( chipher_expected_prev[57] !== 1'bx ) && ( chipher_prev[57] !== chipher_expected_prev[57] )
+		&& ((chipher_expected_prev[57] !== last_chipher_exp[57]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[57] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[57] = chipher_expected_prev[57];
+	end
+	if (
+		( chipher_expected_prev[58] !== 1'bx ) && ( chipher_prev[58] !== chipher_expected_prev[58] )
+		&& ((chipher_expected_prev[58] !== last_chipher_exp[58]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[58] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[58] = chipher_expected_prev[58];
+	end
+	if (
+		( chipher_expected_prev[59] !== 1'bx ) && ( chipher_prev[59] !== chipher_expected_prev[59] )
+		&& ((chipher_expected_prev[59] !== last_chipher_exp[59]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[59] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[59] = chipher_expected_prev[59];
+	end
+	if (
+		( chipher_expected_prev[60] !== 1'bx ) && ( chipher_prev[60] !== chipher_expected_prev[60] )
+		&& ((chipher_expected_prev[60] !== last_chipher_exp[60]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[60] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[60] = chipher_expected_prev[60];
+	end
+	if (
+		( chipher_expected_prev[61] !== 1'bx ) && ( chipher_prev[61] !== chipher_expected_prev[61] )
+		&& ((chipher_expected_prev[61] !== last_chipher_exp[61]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[61] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[61] = chipher_expected_prev[61];
+	end
+	if (
+		( chipher_expected_prev[62] !== 1'bx ) && ( chipher_prev[62] !== chipher_expected_prev[62] )
+		&& ((chipher_expected_prev[62] !== last_chipher_exp[62]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[62] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[62] = chipher_expected_prev[62];
+	end
+	if (
+		( chipher_expected_prev[63] !== 1'bx ) && ( chipher_prev[63] !== chipher_expected_prev[63] )
+		&& ((chipher_expected_prev[63] !== last_chipher_exp[63]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[63] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[63] = chipher_expected_prev[63];
+	end
+	if (
+		( chipher_expected_prev[64] !== 1'bx ) && ( chipher_prev[64] !== chipher_expected_prev[64] )
+		&& ((chipher_expected_prev[64] !== last_chipher_exp[64]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[64] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[64] = chipher_expected_prev[64];
+	end
+	if (
+		( chipher_expected_prev[65] !== 1'bx ) && ( chipher_prev[65] !== chipher_expected_prev[65] )
+		&& ((chipher_expected_prev[65] !== last_chipher_exp[65]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[65] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[65] = chipher_expected_prev[65];
+	end
+	if (
+		( chipher_expected_prev[66] !== 1'bx ) && ( chipher_prev[66] !== chipher_expected_prev[66] )
+		&& ((chipher_expected_prev[66] !== last_chipher_exp[66]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[66] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[66] = chipher_expected_prev[66];
+	end
+	if (
+		( chipher_expected_prev[67] !== 1'bx ) && ( chipher_prev[67] !== chipher_expected_prev[67] )
+		&& ((chipher_expected_prev[67] !== last_chipher_exp[67]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[67] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[67] = chipher_expected_prev[67];
+	end
+	if (
+		( chipher_expected_prev[68] !== 1'bx ) && ( chipher_prev[68] !== chipher_expected_prev[68] )
+		&& ((chipher_expected_prev[68] !== last_chipher_exp[68]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[68] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[68] = chipher_expected_prev[68];
+	end
+	if (
+		( chipher_expected_prev[69] !== 1'bx ) && ( chipher_prev[69] !== chipher_expected_prev[69] )
+		&& ((chipher_expected_prev[69] !== last_chipher_exp[69]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[69] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[69] = chipher_expected_prev[69];
+	end
+	if (
+		( chipher_expected_prev[70] !== 1'bx ) && ( chipher_prev[70] !== chipher_expected_prev[70] )
+		&& ((chipher_expected_prev[70] !== last_chipher_exp[70]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[70] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[70] = chipher_expected_prev[70];
+	end
+	if (
+		( chipher_expected_prev[71] !== 1'bx ) && ( chipher_prev[71] !== chipher_expected_prev[71] )
+		&& ((chipher_expected_prev[71] !== last_chipher_exp[71]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[71] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[71] = chipher_expected_prev[71];
+	end
+	if (
+		( chipher_expected_prev[72] !== 1'bx ) && ( chipher_prev[72] !== chipher_expected_prev[72] )
+		&& ((chipher_expected_prev[72] !== last_chipher_exp[72]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[72] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[72] = chipher_expected_prev[72];
+	end
+	if (
+		( chipher_expected_prev[73] !== 1'bx ) && ( chipher_prev[73] !== chipher_expected_prev[73] )
+		&& ((chipher_expected_prev[73] !== last_chipher_exp[73]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[73] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[73] = chipher_expected_prev[73];
+	end
+	if (
+		( chipher_expected_prev[74] !== 1'bx ) && ( chipher_prev[74] !== chipher_expected_prev[74] )
+		&& ((chipher_expected_prev[74] !== last_chipher_exp[74]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[74] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[74] = chipher_expected_prev[74];
+	end
+	if (
+		( chipher_expected_prev[75] !== 1'bx ) && ( chipher_prev[75] !== chipher_expected_prev[75] )
+		&& ((chipher_expected_prev[75] !== last_chipher_exp[75]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[75] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[75] = chipher_expected_prev[75];
+	end
+	if (
+		( chipher_expected_prev[76] !== 1'bx ) && ( chipher_prev[76] !== chipher_expected_prev[76] )
+		&& ((chipher_expected_prev[76] !== last_chipher_exp[76]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[76] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[76] = chipher_expected_prev[76];
+	end
+	if (
+		( chipher_expected_prev[77] !== 1'bx ) && ( chipher_prev[77] !== chipher_expected_prev[77] )
+		&& ((chipher_expected_prev[77] !== last_chipher_exp[77]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[77] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[77] = chipher_expected_prev[77];
+	end
+	if (
+		( chipher_expected_prev[78] !== 1'bx ) && ( chipher_prev[78] !== chipher_expected_prev[78] )
+		&& ((chipher_expected_prev[78] !== last_chipher_exp[78]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[78] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[78] = chipher_expected_prev[78];
+	end
+	if (
+		( chipher_expected_prev[79] !== 1'bx ) && ( chipher_prev[79] !== chipher_expected_prev[79] )
+		&& ((chipher_expected_prev[79] !== last_chipher_exp[79]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[79] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[79] = chipher_expected_prev[79];
+	end
+	if (
+		( chipher_expected_prev[80] !== 1'bx ) && ( chipher_prev[80] !== chipher_expected_prev[80] )
+		&& ((chipher_expected_prev[80] !== last_chipher_exp[80]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[80] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[80] = chipher_expected_prev[80];
+	end
+	if (
+		( chipher_expected_prev[81] !== 1'bx ) && ( chipher_prev[81] !== chipher_expected_prev[81] )
+		&& ((chipher_expected_prev[81] !== last_chipher_exp[81]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[81] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[81] = chipher_expected_prev[81];
+	end
+	if (
+		( chipher_expected_prev[82] !== 1'bx ) && ( chipher_prev[82] !== chipher_expected_prev[82] )
+		&& ((chipher_expected_prev[82] !== last_chipher_exp[82]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[82] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[82] = chipher_expected_prev[82];
+	end
+	if (
+		( chipher_expected_prev[83] !== 1'bx ) && ( chipher_prev[83] !== chipher_expected_prev[83] )
+		&& ((chipher_expected_prev[83] !== last_chipher_exp[83]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[83] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[83] = chipher_expected_prev[83];
+	end
+	if (
+		( chipher_expected_prev[84] !== 1'bx ) && ( chipher_prev[84] !== chipher_expected_prev[84] )
+		&& ((chipher_expected_prev[84] !== last_chipher_exp[84]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[84] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[84] = chipher_expected_prev[84];
+	end
+	if (
+		( chipher_expected_prev[85] !== 1'bx ) && ( chipher_prev[85] !== chipher_expected_prev[85] )
+		&& ((chipher_expected_prev[85] !== last_chipher_exp[85]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[85] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[85] = chipher_expected_prev[85];
+	end
+	if (
+		( chipher_expected_prev[86] !== 1'bx ) && ( chipher_prev[86] !== chipher_expected_prev[86] )
+		&& ((chipher_expected_prev[86] !== last_chipher_exp[86]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[86] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[86] = chipher_expected_prev[86];
+	end
+	if (
+		( chipher_expected_prev[87] !== 1'bx ) && ( chipher_prev[87] !== chipher_expected_prev[87] )
+		&& ((chipher_expected_prev[87] !== last_chipher_exp[87]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[87] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[87] = chipher_expected_prev[87];
+	end
+	if (
+		( chipher_expected_prev[88] !== 1'bx ) && ( chipher_prev[88] !== chipher_expected_prev[88] )
+		&& ((chipher_expected_prev[88] !== last_chipher_exp[88]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[88] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[88] = chipher_expected_prev[88];
+	end
+	if (
+		( chipher_expected_prev[89] !== 1'bx ) && ( chipher_prev[89] !== chipher_expected_prev[89] )
+		&& ((chipher_expected_prev[89] !== last_chipher_exp[89]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[89] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[89] = chipher_expected_prev[89];
+	end
+	if (
+		( chipher_expected_prev[90] !== 1'bx ) && ( chipher_prev[90] !== chipher_expected_prev[90] )
+		&& ((chipher_expected_prev[90] !== last_chipher_exp[90]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[90] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[90] = chipher_expected_prev[90];
+	end
+	if (
+		( chipher_expected_prev[91] !== 1'bx ) && ( chipher_prev[91] !== chipher_expected_prev[91] )
+		&& ((chipher_expected_prev[91] !== last_chipher_exp[91]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[91] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[91] = chipher_expected_prev[91];
+	end
+	if (
+		( chipher_expected_prev[92] !== 1'bx ) && ( chipher_prev[92] !== chipher_expected_prev[92] )
+		&& ((chipher_expected_prev[92] !== last_chipher_exp[92]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[92] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[92] = chipher_expected_prev[92];
+	end
+	if (
+		( chipher_expected_prev[93] !== 1'bx ) && ( chipher_prev[93] !== chipher_expected_prev[93] )
+		&& ((chipher_expected_prev[93] !== last_chipher_exp[93]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[93] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[93] = chipher_expected_prev[93];
+	end
+	if (
+		( chipher_expected_prev[94] !== 1'bx ) && ( chipher_prev[94] !== chipher_expected_prev[94] )
+		&& ((chipher_expected_prev[94] !== last_chipher_exp[94]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[94] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[94] = chipher_expected_prev[94];
+	end
+	if (
+		( chipher_expected_prev[95] !== 1'bx ) && ( chipher_prev[95] !== chipher_expected_prev[95] )
+		&& ((chipher_expected_prev[95] !== last_chipher_exp[95]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[95] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[95] = chipher_expected_prev[95];
+	end
+	if (
+		( chipher_expected_prev[96] !== 1'bx ) && ( chipher_prev[96] !== chipher_expected_prev[96] )
+		&& ((chipher_expected_prev[96] !== last_chipher_exp[96]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[96] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[96] = chipher_expected_prev[96];
+	end
+	if (
+		( chipher_expected_prev[97] !== 1'bx ) && ( chipher_prev[97] !== chipher_expected_prev[97] )
+		&& ((chipher_expected_prev[97] !== last_chipher_exp[97]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[97] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[97] = chipher_expected_prev[97];
+	end
+	if (
+		( chipher_expected_prev[98] !== 1'bx ) && ( chipher_prev[98] !== chipher_expected_prev[98] )
+		&& ((chipher_expected_prev[98] !== last_chipher_exp[98]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[98] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[98] = chipher_expected_prev[98];
+	end
+	if (
+		( chipher_expected_prev[99] !== 1'bx ) && ( chipher_prev[99] !== chipher_expected_prev[99] )
+		&& ((chipher_expected_prev[99] !== last_chipher_exp[99]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[99] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[99] = chipher_expected_prev[99];
+	end
+	if (
+		( chipher_expected_prev[100] !== 1'bx ) && ( chipher_prev[100] !== chipher_expected_prev[100] )
+		&& ((chipher_expected_prev[100] !== last_chipher_exp[100]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[100] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[100] = chipher_expected_prev[100];
+	end
+	if (
+		( chipher_expected_prev[101] !== 1'bx ) && ( chipher_prev[101] !== chipher_expected_prev[101] )
+		&& ((chipher_expected_prev[101] !== last_chipher_exp[101]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[101] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[101] = chipher_expected_prev[101];
+	end
+	if (
+		( chipher_expected_prev[102] !== 1'bx ) && ( chipher_prev[102] !== chipher_expected_prev[102] )
+		&& ((chipher_expected_prev[102] !== last_chipher_exp[102]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[102] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[102] = chipher_expected_prev[102];
+	end
+	if (
+		( chipher_expected_prev[103] !== 1'bx ) && ( chipher_prev[103] !== chipher_expected_prev[103] )
+		&& ((chipher_expected_prev[103] !== last_chipher_exp[103]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[103] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[103] = chipher_expected_prev[103];
+	end
+	if (
+		( chipher_expected_prev[104] !== 1'bx ) && ( chipher_prev[104] !== chipher_expected_prev[104] )
+		&& ((chipher_expected_prev[104] !== last_chipher_exp[104]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[104] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[104] = chipher_expected_prev[104];
+	end
+	if (
+		( chipher_expected_prev[105] !== 1'bx ) && ( chipher_prev[105] !== chipher_expected_prev[105] )
+		&& ((chipher_expected_prev[105] !== last_chipher_exp[105]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[105] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[105] = chipher_expected_prev[105];
+	end
+	if (
+		( chipher_expected_prev[106] !== 1'bx ) && ( chipher_prev[106] !== chipher_expected_prev[106] )
+		&& ((chipher_expected_prev[106] !== last_chipher_exp[106]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[106] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[106] = chipher_expected_prev[106];
+	end
+	if (
+		( chipher_expected_prev[107] !== 1'bx ) && ( chipher_prev[107] !== chipher_expected_prev[107] )
+		&& ((chipher_expected_prev[107] !== last_chipher_exp[107]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[107] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[107] = chipher_expected_prev[107];
+	end
+	if (
+		( chipher_expected_prev[108] !== 1'bx ) && ( chipher_prev[108] !== chipher_expected_prev[108] )
+		&& ((chipher_expected_prev[108] !== last_chipher_exp[108]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[108] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[108] = chipher_expected_prev[108];
+	end
+	if (
+		( chipher_expected_prev[109] !== 1'bx ) && ( chipher_prev[109] !== chipher_expected_prev[109] )
+		&& ((chipher_expected_prev[109] !== last_chipher_exp[109]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[109] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[109] = chipher_expected_prev[109];
+	end
+	if (
+		( chipher_expected_prev[110] !== 1'bx ) && ( chipher_prev[110] !== chipher_expected_prev[110] )
+		&& ((chipher_expected_prev[110] !== last_chipher_exp[110]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[110] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[110] = chipher_expected_prev[110];
+	end
+	if (
+		( chipher_expected_prev[111] !== 1'bx ) && ( chipher_prev[111] !== chipher_expected_prev[111] )
+		&& ((chipher_expected_prev[111] !== last_chipher_exp[111]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[111] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[111] = chipher_expected_prev[111];
+	end
+	if (
+		( chipher_expected_prev[112] !== 1'bx ) && ( chipher_prev[112] !== chipher_expected_prev[112] )
+		&& ((chipher_expected_prev[112] !== last_chipher_exp[112]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[112] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[112] = chipher_expected_prev[112];
+	end
+	if (
+		( chipher_expected_prev[113] !== 1'bx ) && ( chipher_prev[113] !== chipher_expected_prev[113] )
+		&& ((chipher_expected_prev[113] !== last_chipher_exp[113]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[113] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[113] = chipher_expected_prev[113];
+	end
+	if (
+		( chipher_expected_prev[114] !== 1'bx ) && ( chipher_prev[114] !== chipher_expected_prev[114] )
+		&& ((chipher_expected_prev[114] !== last_chipher_exp[114]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[114] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[114] = chipher_expected_prev[114];
+	end
+	if (
+		( chipher_expected_prev[115] !== 1'bx ) && ( chipher_prev[115] !== chipher_expected_prev[115] )
+		&& ((chipher_expected_prev[115] !== last_chipher_exp[115]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[115] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[115] = chipher_expected_prev[115];
+	end
+	if (
+		( chipher_expected_prev[116] !== 1'bx ) && ( chipher_prev[116] !== chipher_expected_prev[116] )
+		&& ((chipher_expected_prev[116] !== last_chipher_exp[116]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[116] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[116] = chipher_expected_prev[116];
+	end
+	if (
+		( chipher_expected_prev[117] !== 1'bx ) && ( chipher_prev[117] !== chipher_expected_prev[117] )
+		&& ((chipher_expected_prev[117] !== last_chipher_exp[117]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[117] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[117] = chipher_expected_prev[117];
+	end
+	if (
+		( chipher_expected_prev[118] !== 1'bx ) && ( chipher_prev[118] !== chipher_expected_prev[118] )
+		&& ((chipher_expected_prev[118] !== last_chipher_exp[118]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[118] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[118] = chipher_expected_prev[118];
+	end
+	if (
+		( chipher_expected_prev[119] !== 1'bx ) && ( chipher_prev[119] !== chipher_expected_prev[119] )
+		&& ((chipher_expected_prev[119] !== last_chipher_exp[119]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[119] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[119] = chipher_expected_prev[119];
+	end
+	if (
+		( chipher_expected_prev[120] !== 1'bx ) && ( chipher_prev[120] !== chipher_expected_prev[120] )
+		&& ((chipher_expected_prev[120] !== last_chipher_exp[120]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[120] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[120] = chipher_expected_prev[120];
+	end
+	if (
+		( chipher_expected_prev[121] !== 1'bx ) && ( chipher_prev[121] !== chipher_expected_prev[121] )
+		&& ((chipher_expected_prev[121] !== last_chipher_exp[121]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[121] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[121] = chipher_expected_prev[121];
+	end
+	if (
+		( chipher_expected_prev[122] !== 1'bx ) && ( chipher_prev[122] !== chipher_expected_prev[122] )
+		&& ((chipher_expected_prev[122] !== last_chipher_exp[122]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[122] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[122] = chipher_expected_prev[122];
+	end
+	if (
+		( chipher_expected_prev[123] !== 1'bx ) && ( chipher_prev[123] !== chipher_expected_prev[123] )
+		&& ((chipher_expected_prev[123] !== last_chipher_exp[123]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[123] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[123] = chipher_expected_prev[123];
+	end
+	if (
+		( chipher_expected_prev[124] !== 1'bx ) && ( chipher_prev[124] !== chipher_expected_prev[124] )
+		&& ((chipher_expected_prev[124] !== last_chipher_exp[124]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[124] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[124] = chipher_expected_prev[124];
+	end
+	if (
+		( chipher_expected_prev[125] !== 1'bx ) && ( chipher_prev[125] !== chipher_expected_prev[125] )
+		&& ((chipher_expected_prev[125] !== last_chipher_exp[125]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[125] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[125] = chipher_expected_prev[125];
+	end
+	if (
+		( chipher_expected_prev[126] !== 1'bx ) && ( chipher_prev[126] !== chipher_expected_prev[126] )
+		&& ((chipher_expected_prev[126] !== last_chipher_exp[126]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[126] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[126] = chipher_expected_prev[126];
+	end
+	if (
+		( chipher_expected_prev[127] !== 1'bx ) && ( chipher_prev[127] !== chipher_expected_prev[127] )
+		&& ((chipher_expected_prev[127] !== last_chipher_exp[127]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port chipher[127] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", chipher_expected_prev);
+		$display ("     Real value = %b", chipher_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_chipher_exp[127] = chipher_expected_prev[127];
+	end
+	if (
+		( en_c_expected_prev !== 1'bx ) && ( en_c_prev !== en_c_expected_prev )
+		&& ((en_c_expected_prev !== last_en_c_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port en_c :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", en_c_expected_prev);
+		$display ("     Real value = %b", en_c_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_en_c_exp = en_c_expected_prev;
+	end
+	if (
+		( en_r_expected_prev !== 1'bx ) && ( en_r_prev !== en_r_expected_prev )
+		&& ((en_r_expected_prev !== last_en_r_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port en_r :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", en_r_expected_prev);
+		$display ("     Real value = %b", en_r_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_en_r_exp = en_r_expected_prev;
+	end
+	if (
+		( en_ra_expected_prev !== 1'bx ) && ( en_ra_prev !== en_ra_expected_prev )
+		&& ((en_ra_expected_prev !== last_en_ra_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port en_ra :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", en_ra_expected_prev);
+		$display ("     Real value = %b", en_ra_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_en_ra_exp = en_ra_expected_prev;
+	end
+	if (
+		( en_t_expected_prev !== 1'bx ) && ( en_t_prev !== en_t_expected_prev )
+		&& ((en_t_expected_prev !== last_en_t_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port en_t :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", en_t_expected_prev);
+		$display ("     Real value = %b", en_t_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_en_t_exp = en_t_expected_prev;
+	end
+	if (
+		( round_m_expected_prev[0] !== 1'bx ) && ( round_m_prev[0] !== round_m_expected_prev[0] )
+		&& ((round_m_expected_prev[0] !== last_round_m_exp[0]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port round_m[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", round_m_expected_prev);
+		$display ("     Real value = %b", round_m_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_round_m_exp[0] = round_m_expected_prev[0];
+	end
+	if (
+		( round_m_expected_prev[1] !== 1'bx ) && ( round_m_prev[1] !== round_m_expected_prev[1] )
+		&& ((round_m_expected_prev[1] !== last_round_m_exp[1]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port round_m[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", round_m_expected_prev);
+		$display ("     Real value = %b", round_m_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_round_m_exp[1] = round_m_expected_prev[1];
+	end
+	if (
+		( round_m_expected_prev[2] !== 1'bx ) && ( round_m_prev[2] !== round_m_expected_prev[2] )
+		&& ((round_m_expected_prev[2] !== last_round_m_exp[2]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port round_m[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", round_m_expected_prev);
+		$display ("     Real value = %b", round_m_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_round_m_exp[2] = round_m_expected_prev[2];
+	end
+	if (
+		( round_m_expected_prev[3] !== 1'bx ) && ( round_m_prev[3] !== round_m_expected_prev[3] )
+		&& ((round_m_expected_prev[3] !== last_round_m_exp[3]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port round_m[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", round_m_expected_prev);
+		$display ("     Real value = %b", round_m_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_round_m_exp[3] = round_m_expected_prev[3];
+	end
+	if (
+		( sel_m_expected_prev !== 1'bx ) && ( sel_m_prev !== sel_m_expected_prev )
+		&& ((sel_m_expected_prev !== last_sel_m_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sel_m :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sel_m_expected_prev);
+		$display ("     Real value = %b", sel_m_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_sel_m_exp = sel_m_expected_prev;
+	end
+	if (
+		( sel_m3_expected_prev !== 1'bx ) && ( sel_m3_prev !== sel_m3_expected_prev )
+		&& ((sel_m3_expected_prev !== last_sel_m3_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sel_m3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sel_m3_expected_prev);
+		$display ("     Real value = %b", sel_m3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_sel_m3_exp = sel_m3_expected_prev;
+	end
+	if (
+		( state_expected_prev[0] !== 1'bx ) && ( state_prev[0] !== state_expected_prev[0] )
+		&& ((state_expected_prev[0] !== last_state_exp[0]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port state[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", state_expected_prev);
+		$display ("     Real value = %b", state_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_state_exp[0] = state_expected_prev[0];
+	end
+	if (
+		( state_expected_prev[1] !== 1'bx ) && ( state_prev[1] !== state_expected_prev[1] )
+		&& ((state_expected_prev[1] !== last_state_exp[1]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port state[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", state_expected_prev);
+		$display ("     Real value = %b", state_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_state_exp[1] = state_expected_prev[1];
+	end
+	if (
+		( state_expected_prev[2] !== 1'bx ) && ( state_prev[2] !== state_expected_prev[2] )
+		&& ((state_expected_prev[2] !== last_state_exp[2]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port state[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", state_expected_prev);
+		$display ("     Real value = %b", state_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_state_exp[2] = state_expected_prev[2];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#3000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module topo_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk_m;
+reg reset_m;
+// wires                                               
+wire [127:0] chipher;
+wire en_c;
+wire en_r;
+wire en_ra;
+wire en_t;
+wire [3:0] round_m;
+wire sel_m;
+wire sel_m3;
+wire [2:0] state;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+topo i1 (
+// port map - connection between master ports and signals/registers   
+	.chipher(chipher),
+	.clk_m(clk_m),
+	.en_c(en_c),
+	.en_r(en_r),
+	.en_ra(en_ra),
+	.en_t(en_t),
+	.reset_m(reset_m),
+	.round_m(round_m),
+	.sel_m(sel_m),
+	.sel_m3(sel_m3),
+	.state(state)
+);
+
+// clk_m
+always
+begin
+	clk_m = 1'b0;
+	clk_m = #20000 1'b1;
+	#20000;
+end 
+
+// reset_m
+initial
+begin
+	reset_m = 1'b1;
+	reset_m = #20000 1'b0;
+end 
+
+topo_vlg_sample_tst tb_sample (
+	.clk_m(clk_m),
+	.reset_m(reset_m),
+	.sampler_tx(sampler)
+);
+
+topo_vlg_check_tst tb_out(
+	.chipher(chipher),
+	.en_c(en_c),
+	.en_r(en_r),
+	.en_ra(en_ra),
+	.en_t(en_t),
+	.round_m(round_m),
+	.sel_m(sel_m),
+	.sel_m3(sel_m3),
+	.state(state),
+	.sampler_rx(sampler)
+);
+endmodule
+
