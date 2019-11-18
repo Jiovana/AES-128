@@ -1,0 +1,101 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do aes_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {aes.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneiii_atom_pack
+# -- Loading package cycloneiii_components
+# -- Compiling entity altsyncram_8
+# -- Compiling architecture structure of altsyncram_8
+# -- Compiling entity altsyncram_10
+# -- Compiling architecture structure of altsyncram_10
+# -- Compiling entity altsyncram_7
+# -- Compiling architecture structure of altsyncram_7
+# -- Compiling entity altsyncram_4
+# -- Compiling architecture structure of altsyncram_4
+# -- Compiling entity altsyncram_9
+# -- Compiling architecture structure of altsyncram_9
+# -- Compiling entity altsyncram_1
+# -- Compiling architecture structure of altsyncram_1
+# -- Compiling entity altsyncram_3
+# -- Compiling architecture structure of altsyncram_3
+# -- Compiling entity altsyncram_6
+# -- Compiling architecture structure of altsyncram_6
+# -- Compiling entity altsyncram_2
+# -- Compiling architecture structure of altsyncram_2
+# -- Compiling entity altsyncram_5
+# -- Compiling architecture structure of altsyncram_5
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity aes
+# -- Compiling architecture structure of aes
+# 
+# vcom -93 -work work {D:/Documentos/Designs/Quartus/AES/testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity testbench
+# -- Compiling architecture rtl of testbench
+# 
+# vsim -t 1ps -L altera -L cycloneiii -L gate_work -L work -voptargs="+acc"  testbench
+# vsim -L altera -L cycloneiii -L gate_work -L work -voptargs=\"+acc\" -t 1ps testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(rtl)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiii.cycloneiii_atom_pack(body)
+# Loading cycloneiii.cycloneiii_components
+# Loading work.aes(structure)
+# Loading work.altsyncram_8(structure)
+# Loading cycloneiii.cycloneiii_ram_block(block_arch)
+# Loading cycloneiii.cycloneiii_ram_register(reg_arch)
+# Loading cycloneiii.cycloneiii_ram_pulse_generator(pgen_arch)
+# Loading cycloneiii.cycloneiii_lcell_comb(vital_lcell_comb)
+# Loading work.altsyncram_10(structure)
+# Loading work.altsyncram_7(structure)
+# Loading work.altsyncram_4(structure)
+# Loading work.altsyncram_9(structure)
+# Loading work.altsyncram_1(structure)
+# Loading work.altsyncram_3(structure)
+# Loading work.altsyncram_6(structure)
+# Loading work.altsyncram_2(structure)
+# Loading work.altsyncram_5(structure)
+# Loading altera.dffeas(vital_dffeas)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiii.cycloneiii_io_obuf(arch)
+# Loading cycloneiii.cycloneiii_io_ibuf(arch)
+# Loading cycloneiii.cycloneiii_clkctrl(vital_clkctrl)
+# Loading cycloneiii.cycloneiii_ena_reg(behave)
+# ** Warning: Design size of 24 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# 
+# source aes_dump_all_vcd_nodes.tcl
+# 0
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns

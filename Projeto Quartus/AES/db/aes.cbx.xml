@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="aes">
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|aes|operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_tin1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

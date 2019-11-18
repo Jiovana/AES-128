@@ -1,0 +1,327 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 11:25:05  September 10, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		aes_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C25F324C6
+set_global_assignment -name TOP_LEVEL_ENTITY aes
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:25:05  SEPTEMBER 10, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 324
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name SEARCH_PATH "d:\\documentos\\designs\\quartus\\aes\\functions"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY ON -section_id eda_simulation
+set_global_assignment -name EDA_MAP_ILLEGAL_CHARACTERS ON -section_id eda_simulation
+set_global_assignment -name EDA_ENABLE_GLITCH_FILTERING ON -section_id eda_simulation
+set_global_assignment -name EDA_WRITE_NODES_FOR_POWER_ESTIMATION ALL_NODES -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_DESIGN_INSTANCE_NAME tudo -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME tudo -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
+set_global_assignment -name EDA_FORMAL_VERIFICATION_TOOL "Conformal LEC"
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
+set_global_assignment -name POWER_OUTPUT_SAF_NAME aes.rpt
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
+set_global_assignment -name POWER_REPORT_SIGNAL_ACTIVITY ON
+set_global_assignment -name POWER_REPORT_POWER_DISSIPATION ON
+set_location_assignment PIN_V9 -to osc_clk
+set_location_assignment PIN_N2 -to reset_n
+set_location_assignment PIN_D14 -to video_clk
+set_location_assignment PIN_U2 -to ddr_sdram_mem_clk
+set_location_assignment PIN_V2 -to ddr_sdram_mem_clk_n
+set_location_assignment PIN_V1 -to ddr_sdram_mem_cs_n
+set_location_assignment PIN_R13 -to ddr_sdram_mem_cke
+set_location_assignment PIN_U1 -to ddr_sdram_mem_addr[0]
+set_location_assignment PIN_U5 -to ddr_sdram_mem_addr[1]
+set_location_assignment PIN_U7 -to ddr_sdram_mem_addr[2]
+set_location_assignment PIN_U8 -to ddr_sdram_mem_addr[3]
+set_location_assignment PIN_P8 -to ddr_sdram_mem_addr[4]
+set_location_assignment PIN_P7 -to ddr_sdram_mem_addr[5]
+set_location_assignment PIN_P6 -to ddr_sdram_mem_addr[6]
+set_location_assignment PIN_T14 -to ddr_sdram_mem_addr[7]
+set_location_assignment PIN_T13 -to ddr_sdram_mem_addr[8]
+set_location_assignment PIN_V13 -to ddr_sdram_mem_addr[9]
+set_location_assignment PIN_U17 -to ddr_sdram_mem_addr[10]
+set_location_assignment PIN_V17 -to ddr_sdram_mem_addr[11]
+set_location_assignment PIN_U16 -to ddr_sdram_mem_addr[12]
+set_location_assignment PIN_V11 -to ddr_sdram_mem_ba[0]
+set_location_assignment PIN_V12 -to ddr_sdram_mem_ba[1]
+set_location_assignment PIN_V16 -to ddr_sdram_mem_ras_n
+set_location_assignment PIN_T4 -to ddr_sdram_mem_cas_n
+set_location_assignment PIN_U15 -to ddr_sdram_mem_we_n
+set_location_assignment PIN_U4 -to ddr_sdram_mem_dq[0]
+set_location_assignment PIN_V4 -to ddr_sdram_mem_dq[1]
+set_location_assignment PIN_R8 -to ddr_sdram_mem_dq[2]
+set_location_assignment PIN_V5 -to ddr_sdram_mem_dq[3]
+set_location_assignment PIN_P9 -to ddr_sdram_mem_dq[4]
+set_location_assignment PIN_U6 -to ddr_sdram_mem_dq[5]
+set_location_assignment PIN_V6 -to ddr_sdram_mem_dq[6]
+set_location_assignment PIN_V7 -to ddr_sdram_mem_dq[7]
+set_location_assignment PIN_U13 -to ddr_sdram_mem_dq[8]
+set_location_assignment PIN_U12 -to ddr_sdram_mem_dq[9]
+set_location_assignment PIN_U11 -to ddr_sdram_mem_dq[10]
+set_location_assignment PIN_V15 -to ddr_sdram_mem_dq[11]
+set_location_assignment PIN_U14 -to ddr_sdram_mem_dq[12]
+set_location_assignment PIN_R11 -to ddr_sdram_mem_dq[13]
+set_location_assignment PIN_P10 -to ddr_sdram_mem_dq[14]
+set_location_assignment PIN_V14 -to ddr_sdram_mem_dq[15]
+set_location_assignment PIN_U3 -to ddr_sdram_mem_dqs[0]
+set_location_assignment PIN_T8 -to ddr_sdram_mem_dqs[1]
+set_location_assignment PIN_V3 -to ddr_sdram_mem_dm[0]
+set_location_assignment PIN_V8 -to ddr_sdram_mem_dm[1]
+set_location_assignment PIN_D18 -to flash_write_n
+set_location_assignment PIN_E2 -to flash_chipselect_n
+set_location_assignment PIN_D17 -to flash_read_n
+set_location_assignment PIN_C3 -to flash_reset_n
+set_location_assignment PIN_A6 -to flash_address[20]
+set_location_assignment PIN_B18 -to flash_address[21]
+set_location_assignment PIN_C17 -to flash_address[22]
+set_location_assignment PIN_C18 -to flash_address[23]
+set_location_assignment PIN_E12 -to flash_address[1]
+set_location_assignment PIN_A16 -to flash_address[2]
+set_location_assignment PIN_B16 -to flash_address[3]
+set_location_assignment PIN_A15 -to flash_address[4]
+set_location_assignment PIN_B15 -to flash_address[5]
+set_location_assignment PIN_A14 -to flash_address[6]
+set_location_assignment PIN_B14 -to flash_address[7]
+set_location_assignment PIN_A13 -to flash_address[8]
+set_location_assignment PIN_B13 -to flash_address[9]
+set_location_assignment PIN_A12 -to flash_address[10]
+set_location_assignment PIN_B12 -to flash_address[11]
+set_location_assignment PIN_A11 -to flash_address[12]
+set_location_assignment PIN_B11 -to flash_address[13]
+set_location_assignment PIN_C10 -to flash_address[14]
+set_location_assignment PIN_D10 -to flash_address[15]
+set_location_assignment PIN_E10 -to flash_address[16]
+set_location_assignment PIN_C9 -to flash_address[17]
+set_location_assignment PIN_D9 -to flash_address[18]
+set_location_assignment PIN_A7 -to flash_address[19]
+set_location_assignment PIN_H3 -to flash_data[0]
+set_location_assignment PIN_D1 -to flash_data[1]
+set_location_assignment PIN_A8 -to flash_data[2]
+set_location_assignment PIN_B8 -to flash_data[3]
+set_location_assignment PIN_B7 -to flash_data[4]
+set_location_assignment PIN_C5 -to flash_data[5]
+set_location_assignment PIN_E8 -to flash_data[6]
+set_location_assignment PIN_A4 -to flash_data[7]
+set_location_assignment PIN_B4 -to flash_data[8]
+set_location_assignment PIN_E7 -to flash_data[9]
+set_location_assignment PIN_A3 -to flash_data[10]
+set_location_assignment PIN_B3 -to flash_data[11]
+set_location_assignment PIN_D5 -to flash_data[12]
+set_location_assignment PIN_B5 -to flash_data[13]
+set_location_assignment PIN_A5 -to flash_data[14]
+set_location_assignment PIN_B6 -to flash_data[15]
+set_location_assignment PIN_H6 -to lcd_id_i2cscl
+set_location_assignment PIN_D3 -to lcd_id_i2cdat
+set_location_assignment PIN_R4 -to lcd_data[0]
+set_location_assignment PIN_T17 -to lcd_data[1]
+set_location_assignment PIN_T18 -to lcd_data[2]
+set_location_assignment PIN_L16 -to lcd_data[3]
+set_location_assignment PIN_M17 -to lcd_data[4]
+set_location_assignment PIN_N6 -to lcd_data[5]
+set_location_assignment PIN_M13 -to lcd_data[6]
+set_location_assignment PIN_N13 -to lcd_data[7]
+set_location_assignment PIN_R17 -to lcd_den
+set_location_assignment PIN_M14 -to lcd_hd
+set_location_assignment PIN_L13 -to lcd_vd
+set_location_assignment PIN_M6 -to lcd_scen
+set_location_assignment PIN_T2 -to lcd_sda
+set_location_assignment PIN_N17 -to lcd_adc_penirq_n
+set_location_assignment PIN_L18 -to lcd_adc_out
+set_location_assignment PIN_U18 -to lcd_adc_din
+set_location_assignment PIN_V18 -to lcd_adc_dclk
+set_location_assignment PIN_R5 -to lcd_adc_cs_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_clk
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_clk_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_cs_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_cke
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[1]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[2]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[3]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[4]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[5]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[6]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[7]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[8]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[9]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[10]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[11]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[12]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_ba[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_ba[1]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_ras_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_cas_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_we_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[1]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[2]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[3]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[4]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[5]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[6]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[7]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[8]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[9]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[10]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[11]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[12]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[13]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[14]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[15]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dqs[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dqs[1]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dm[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dm[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_clk -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_clk_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_cs_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_cke -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[2] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[3] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[4] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[5] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[6] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[7] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[8] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[9] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[10] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[11] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[12] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_ba[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_ba[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_ras_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_cas_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_we_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[2] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[3] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[4] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[5] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[6] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[7] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[8] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[9] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[10] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[11] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[12] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[13] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[14] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[15] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[2] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[3] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[4] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[5] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[6] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[7] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[8] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[9] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[10] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[11] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[12] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[13] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[14] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[15] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dqs[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dqs[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dqs[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dqs[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dm[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dm[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dm[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dm[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name VIRTUAL_PIN ON -to flash_address[0] -entity sys_arc_lab_top_level
+set_global_assignment -name POWER_USE_INPUT_FILES ON
+set_global_assignment -name SDC_FILE aes.sdc
+set_global_assignment -name VHDL_FILE aes.vhd
+set_global_assignment -name VHDL_FILE operational.vhd
+set_global_assignment -name VHDL_FILE subBytes.vhd
+set_global_assignment -name VHDL_FILE functions/aes.vhd
+set_global_assignment -name VHDL_FILE rom.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VHDL_FILE reg_128b.vhd
+set_global_assignment -name VHDL_FILE shiftRows.vhd
+set_global_assignment -name VHDL_FILE addRoundKey.vhd
+set_global_assignment -name VHDL_FILE mixColumns_32b.vhd
+set_global_assignment -name VHDL_FILE g_Mult.vhd
+set_global_assignment -name VHDL_FILE key_mux.vhd
+set_global_assignment -name VHDL_FILE roundKeyGen.vhd
+set_global_assignment -name VHDL_FILE mux2p1.vhd
+set_global_assignment -name VHDL_FILE counter.vhd
+set_global_assignment -name VHDL_FILE fsm.vhd
+set_global_assignment -name VHDL_FILE testbench.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformKeyGen.vwf
+set_global_assignment -name VHDL_FILE reg_32b.vhd
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_INPUT_FILE_NAME simulation/modelsim/aes.vcd -section_id aes.vcd
+set_instance_assignment -name POWER_READ_INPUT_FILE aes.vcd -to aes
+set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformFull.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformOP.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Documentos/Designs/Quartus/AES/WaveformFull.vwf"
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench.vhd -section_id testbench
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

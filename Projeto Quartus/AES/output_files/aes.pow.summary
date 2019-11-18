@@ -1,0 +1,12 @@
+PowerPlay Power Analyzer Status : Successful - Mon Nov 18 16:15:01 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : aes
+Top-level Entity Name : aes
+Family : Cyclone III
+Device : EP3C25F324C6
+Power Models : Final
+Total Thermal Power Dissipation : 169.47 mW
+Core Dynamic Thermal Power Dissipation : 56.09 mW
+Core Static Thermal Power Dissipation : 81.26 mW
+I/O Thermal Power Dissipation : 32.12 mW
+Power Estimation Confidence : High: user provided sufficient toggle rate data

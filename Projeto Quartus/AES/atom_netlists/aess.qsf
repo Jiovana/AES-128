@@ -1,0 +1,402 @@
+set_location_assignment PIN_C5 -to chipher[127]
+set_location_assignment PIN_C2 -to chipher[126]
+set_location_assignment PIN_D9 -to chipher[125]
+set_location_assignment PIN_B13 -to chipher[124]
+set_location_assignment PIN_A11 -to chipher[123]
+set_location_assignment PIN_E7 -to chipher[122]
+set_location_assignment PIN_E12 -to chipher[121]
+set_location_assignment PIN_D7 -to chipher[120]
+set_location_assignment PIN_E9 -to chipher[119]
+set_location_assignment PIN_D16 -to chipher[118]
+set_location_assignment PIN_U8 -to chipher[117]
+set_location_assignment PIN_E8 -to chipher[116]
+set_location_assignment PIN_C16 -to chipher[115]
+set_location_assignment PIN_H14 -to chipher[114]
+set_location_assignment PIN_F12 -to chipher[113]
+set_location_assignment PIN_D2 -to chipher[112]
+set_location_assignment PIN_B8 -to chipher[111]
+set_location_assignment PIN_U6 -to chipher[110]
+set_location_assignment PIN_U5 -to chipher[109]
+set_location_assignment PIN_G13 -to chipher[108]
+set_location_assignment PIN_V4 -to chipher[107]
+set_location_assignment PIN_M18 -to chipher[106]
+set_location_assignment PIN_L17 -to chipher[105]
+set_location_assignment PIN_K5 -to chipher[104]
+set_location_assignment PIN_M1 -to chipher[103]
+set_location_assignment PIN_K17 -to chipher[102]
+set_location_assignment PIN_L5 -to chipher[101]
+set_location_assignment PIN_V5 -to chipher[100]
+set_location_assignment PIN_V8 -to chipher[99]
+set_location_assignment PIN_K18 -to chipher[98]
+set_location_assignment PIN_R8 -to chipher[97]
+set_location_assignment PIN_U15 -to chipher[96]
+set_location_assignment PIN_H6 -to chipher[95]
+set_location_assignment PIN_H1 -to chipher[94]
+set_location_assignment PIN_H15 -to chipher[93]
+set_location_assignment PIN_P11 -to chipher[92]
+set_location_assignment PIN_E1 -to chipher[91]
+set_location_assignment PIN_U11 -to chipher[90]
+set_location_assignment PIN_D17 -to chipher[89]
+set_location_assignment PIN_G2 -to chipher[88]
+set_location_assignment PIN_D18 -to chipher[87]
+set_location_assignment PIN_G17 -to chipher[86]
+set_location_assignment PIN_G1 -to chipher[85]
+set_location_assignment PIN_L16 -to chipher[84]
+set_location_assignment PIN_F3 -to chipher[83]
+set_location_assignment PIN_B3 -to chipher[82]
+set_location_assignment PIN_T8 -to chipher[81]
+set_location_assignment PIN_C14 -to chipher[80]
+set_location_assignment PIN_C10 -to chipher[79]
+set_location_assignment PIN_H17 -to chipher[78]
+set_location_assignment PIN_A1 -to chipher[77]
+set_location_assignment PIN_H18 -to chipher[76]
+set_location_assignment PIN_V7 -to chipher[75]
+set_location_assignment PIN_C12 -to chipher[74]
+set_location_assignment PIN_F7 -to chipher[73]
+set_location_assignment PIN_P10 -to chipher[72]
+set_location_assignment PIN_D14 -to chipher[71]
+set_location_assignment PIN_U14 -to chipher[70]
+set_location_assignment PIN_B5 -to chipher[69]
+set_location_assignment PIN_L14 -to chipher[68]
+set_location_assignment PIN_C18 -to chipher[67]
+set_location_assignment PIN_A8 -to chipher[66]
+set_location_assignment PIN_A12 -to chipher[65]
+set_location_assignment PIN_D12 -to chipher[64]
+set_location_assignment PIN_M3 -to chipher[63]
+set_location_assignment PIN_U4 -to chipher[62]
+set_location_assignment PIN_M17 -to chipher[61]
+set_location_assignment PIN_P7 -to chipher[60]
+set_location_assignment PIN_L3 -to chipher[59]
+set_location_assignment PIN_H16 -to chipher[58]
+set_location_assignment PIN_F10 -to chipher[57]
+set_location_assignment PIN_K2 -to chipher[56]
+set_location_assignment PIN_B15 -to chipher[55]
+set_location_assignment PIN_B16 -to chipher[54]
+set_location_assignment PIN_A16 -to chipher[53]
+set_location_assignment PIN_B12 -to chipher[52]
+set_location_assignment PIN_R2 -to chipher[51]
+set_location_assignment PIN_D5 -to chipher[50]
+set_location_assignment PIN_L18 -to chipher[49]
+set_location_assignment PIN_G18 -to chipher[48]
+set_location_assignment PIN_C17 -to chipher[47]
+set_location_assignment PIN_A15 -to chipher[46]
+set_location_assignment PIN_C1 -to chipher[45]
+set_location_assignment PIN_G14 -to chipher[44]
+set_location_assignment PIN_D10 -to chipher[43]
+set_location_assignment PIN_B14 -to chipher[42]
+set_location_assignment PIN_C3 -to chipher[41]
+set_location_assignment PIN_U12 -to chipher[40]
+set_location_assignment PIN_V3 -to chipher[39]
+set_location_assignment PIN_A14 -to chipher[38]
+set_location_assignment PIN_T6 -to chipher[37]
+set_location_assignment PIN_A17 -to chipher[36]
+set_location_assignment PIN_B2 -to chipher[35]
+set_location_assignment PIN_F11 -to chipher[34]
+set_location_assignment PIN_D3 -to chipher[33]
+set_location_assignment PIN_E11 -to chipher[32]
+set_location_assignment PIN_E6 -to chipher[31]
+set_location_assignment PIN_A18 -to chipher[30]
+set_location_assignment PIN_A7 -to chipher[29]
+set_location_assignment PIN_H13 -to chipher[28]
+set_location_assignment PIN_U13 -to chipher[27]
+set_location_assignment PIN_J13 -to chipher[26]
+set_location_assignment PIN_E14 -to chipher[25]
+set_location_assignment PIN_E17 -to chipher[24]
+set_location_assignment PIN_L1 -to chipher[23]
+set_location_assignment PIN_V6 -to chipher[22]
+set_location_assignment PIN_A3 -to chipher[21]
+set_location_assignment PIN_E13 -to chipher[20]
+set_location_assignment PIN_V13 -to chipher[19]
+set_location_assignment PIN_P9 -to chipher[18]
+set_location_assignment PIN_B18 -to chipher[17]
+set_location_assignment PIN_G6 -to chipher[16]
+set_location_assignment PIN_U3 -to chipher[15]
+set_location_assignment PIN_U7 -to chipher[14]
+set_location_assignment PIN_A2 -to chipher[13]
+set_location_assignment PIN_F8 -to chipher[12]
+set_location_assignment PIN_L15 -to chipher[11]
+set_location_assignment PIN_P8 -to chipher[10]
+set_location_assignment PIN_L4 -to chipher[9]
+set_location_assignment PIN_V12 -to chipher[8]
+set_location_assignment PIN_K1 -to chipher[7]
+set_location_assignment PIN_F6 -to chipher[6]
+set_location_assignment PIN_B11 -to chipher[5]
+set_location_assignment PIN_L2 -to chipher[4]
+set_location_assignment PIN_A13 -to chipher[3]
+set_location_assignment PIN_V11 -to chipher[2]
+set_location_assignment PIN_N9 -to chipher[1]
+set_location_assignment PIN_L6 -to chipher[0]
+set_location_assignment PIN_F2 -to clk_m
+set_location_assignment PIN_C7 -to en_c
+set_location_assignment PIN_E10 -to en_r
+set_location_assignment PIN_A6 -to en_ra
+set_location_assignment PIN_B7 -to en_t
+set_location_assignment PIN_F18 -to reset_m
+set_location_assignment PIN_A4 -to round_m[3]
+set_location_assignment PIN_B4 -to round_m[2]
+set_location_assignment PIN_H2 -to round_m[1]
+set_location_assignment PIN_A5 -to round_m[0]
+set_location_assignment PIN_B6 -to sel_m
+set_location_assignment PIN_C9 -to sel_m3
+set_location_assignment PIN_F9 -to state[2]
+set_location_assignment PIN_M2 -to state[1]
+set_location_assignment PIN_P2 -to state[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_V9 -to osc_clk
+set_location_assignment PIN_N2 -to reset_n
+set_location_assignment PIN_D14 -to video_clk
+set_location_assignment PIN_U2 -to ddr_sdram_mem_clk
+set_location_assignment PIN_V2 -to ddr_sdram_mem_clk_n
+set_location_assignment PIN_V1 -to ddr_sdram_mem_cs_n
+set_location_assignment PIN_R13 -to ddr_sdram_mem_cke
+set_location_assignment PIN_U1 -to ddr_sdram_mem_addr[0]
+set_location_assignment PIN_U5 -to ddr_sdram_mem_addr[1]
+set_location_assignment PIN_U7 -to ddr_sdram_mem_addr[2]
+set_location_assignment PIN_U8 -to ddr_sdram_mem_addr[3]
+set_location_assignment PIN_P8 -to ddr_sdram_mem_addr[4]
+set_location_assignment PIN_P7 -to ddr_sdram_mem_addr[5]
+set_location_assignment PIN_P6 -to ddr_sdram_mem_addr[6]
+set_location_assignment PIN_T14 -to ddr_sdram_mem_addr[7]
+set_location_assignment PIN_T13 -to ddr_sdram_mem_addr[8]
+set_location_assignment PIN_V13 -to ddr_sdram_mem_addr[9]
+set_location_assignment PIN_U17 -to ddr_sdram_mem_addr[10]
+set_location_assignment PIN_V17 -to ddr_sdram_mem_addr[11]
+set_location_assignment PIN_U16 -to ddr_sdram_mem_addr[12]
+set_location_assignment PIN_V11 -to ddr_sdram_mem_ba[0]
+set_location_assignment PIN_V12 -to ddr_sdram_mem_ba[1]
+set_location_assignment PIN_V16 -to ddr_sdram_mem_ras_n
+set_location_assignment PIN_T4 -to ddr_sdram_mem_cas_n
+set_location_assignment PIN_U15 -to ddr_sdram_mem_we_n
+set_location_assignment PIN_U4 -to ddr_sdram_mem_dq[0]
+set_location_assignment PIN_V4 -to ddr_sdram_mem_dq[1]
+set_location_assignment PIN_R8 -to ddr_sdram_mem_dq[2]
+set_location_assignment PIN_V5 -to ddr_sdram_mem_dq[3]
+set_location_assignment PIN_P9 -to ddr_sdram_mem_dq[4]
+set_location_assignment PIN_U6 -to ddr_sdram_mem_dq[5]
+set_location_assignment PIN_V6 -to ddr_sdram_mem_dq[6]
+set_location_assignment PIN_V7 -to ddr_sdram_mem_dq[7]
+set_location_assignment PIN_U13 -to ddr_sdram_mem_dq[8]
+set_location_assignment PIN_U12 -to ddr_sdram_mem_dq[9]
+set_location_assignment PIN_U11 -to ddr_sdram_mem_dq[10]
+set_location_assignment PIN_V15 -to ddr_sdram_mem_dq[11]
+set_location_assignment PIN_U14 -to ddr_sdram_mem_dq[12]
+set_location_assignment PIN_R11 -to ddr_sdram_mem_dq[13]
+set_location_assignment PIN_P10 -to ddr_sdram_mem_dq[14]
+set_location_assignment PIN_V14 -to ddr_sdram_mem_dq[15]
+set_location_assignment PIN_U3 -to ddr_sdram_mem_dqs[0]
+set_location_assignment PIN_T8 -to ddr_sdram_mem_dqs[1]
+set_location_assignment PIN_V3 -to ddr_sdram_mem_dm[0]
+set_location_assignment PIN_V8 -to ddr_sdram_mem_dm[1]
+set_location_assignment PIN_D18 -to flash_write_n
+set_location_assignment PIN_E2 -to flash_chipselect_n
+set_location_assignment PIN_D17 -to flash_read_n
+set_location_assignment PIN_C3 -to flash_reset_n
+set_location_assignment PIN_A6 -to flash_address[20]
+set_location_assignment PIN_B18 -to flash_address[21]
+set_location_assignment PIN_C17 -to flash_address[22]
+set_location_assignment PIN_C18 -to flash_address[23]
+set_location_assignment PIN_E12 -to flash_address[1]
+set_location_assignment PIN_A16 -to flash_address[2]
+set_location_assignment PIN_B16 -to flash_address[3]
+set_location_assignment PIN_A15 -to flash_address[4]
+set_location_assignment PIN_B15 -to flash_address[5]
+set_location_assignment PIN_A14 -to flash_address[6]
+set_location_assignment PIN_B14 -to flash_address[7]
+set_location_assignment PIN_A13 -to flash_address[8]
+set_location_assignment PIN_B13 -to flash_address[9]
+set_location_assignment PIN_A12 -to flash_address[10]
+set_location_assignment PIN_B12 -to flash_address[11]
+set_location_assignment PIN_A11 -to flash_address[12]
+set_location_assignment PIN_B11 -to flash_address[13]
+set_location_assignment PIN_C10 -to flash_address[14]
+set_location_assignment PIN_D10 -to flash_address[15]
+set_location_assignment PIN_E10 -to flash_address[16]
+set_location_assignment PIN_C9 -to flash_address[17]
+set_location_assignment PIN_D9 -to flash_address[18]
+set_location_assignment PIN_A7 -to flash_address[19]
+set_location_assignment PIN_H3 -to flash_data[0]
+set_location_assignment PIN_D1 -to flash_data[1]
+set_location_assignment PIN_A8 -to flash_data[2]
+set_location_assignment PIN_B8 -to flash_data[3]
+set_location_assignment PIN_B7 -to flash_data[4]
+set_location_assignment PIN_C5 -to flash_data[5]
+set_location_assignment PIN_E8 -to flash_data[6]
+set_location_assignment PIN_A4 -to flash_data[7]
+set_location_assignment PIN_B4 -to flash_data[8]
+set_location_assignment PIN_E7 -to flash_data[9]
+set_location_assignment PIN_A3 -to flash_data[10]
+set_location_assignment PIN_B3 -to flash_data[11]
+set_location_assignment PIN_D5 -to flash_data[12]
+set_location_assignment PIN_B5 -to flash_data[13]
+set_location_assignment PIN_A5 -to flash_data[14]
+set_location_assignment PIN_B6 -to flash_data[15]
+set_location_assignment PIN_H6 -to lcd_id_i2cscl
+set_location_assignment PIN_D3 -to lcd_id_i2cdat
+set_location_assignment PIN_R4 -to lcd_data[0]
+set_location_assignment PIN_T17 -to lcd_data[1]
+set_location_assignment PIN_T18 -to lcd_data[2]
+set_location_assignment PIN_L16 -to lcd_data[3]
+set_location_assignment PIN_M17 -to lcd_data[4]
+set_location_assignment PIN_N6 -to lcd_data[5]
+set_location_assignment PIN_M13 -to lcd_data[6]
+set_location_assignment PIN_N13 -to lcd_data[7]
+set_location_assignment PIN_R17 -to lcd_den
+set_location_assignment PIN_M14 -to lcd_hd
+set_location_assignment PIN_L13 -to lcd_vd
+set_location_assignment PIN_M6 -to lcd_scen
+set_location_assignment PIN_T2 -to lcd_sda
+set_location_assignment PIN_N17 -to lcd_adc_penirq_n
+set_location_assignment PIN_L18 -to lcd_adc_out
+set_location_assignment PIN_U18 -to lcd_adc_din
+set_location_assignment PIN_V18 -to lcd_adc_dclk
+set_location_assignment PIN_R5 -to lcd_adc_cs_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_clk
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_clk_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_cs_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_cke
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[1]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[2]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[3]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[4]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[5]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[6]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[7]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[8]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[9]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[10]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[11]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_addr[12]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_ba[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_ba[1]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_ras_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_cas_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_we_n
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[1]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[2]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[3]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[4]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[5]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[6]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[7]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[8]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[9]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[10]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[11]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[12]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[13]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[14]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dq[15]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dqs[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dqs[1]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dm[0]
+set_instance_assignment -name IO_STANDARD "SSTL-2 CLASS I" -to ddr_sdram_mem_dm[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_clk -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_clk_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_cs_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_cke -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[2] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[3] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[4] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[5] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[6] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[7] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[8] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[9] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[10] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[11] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_addr[12] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_ba[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_ba[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_ras_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_cas_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr_sdram_mem_we_n -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[2] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[3] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[4] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[5] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[6] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[7] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[8] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[9] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[10] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[11] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[12] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[13] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[14] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dq[15] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[2] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[3] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[4] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[5] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[6] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[7] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[8] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[9] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[10] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[11] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[12] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[13] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[14] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dq[15] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dqs[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dqs[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dqs[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dqs[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dm[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr_sdram_mem_dm[1] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dm[0] -entity sys_arc_lab_top_level
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to ddr_sdram_mem_dm[1] -entity sys_arc_lab_top_level
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C25F324C6
+set_global_assignment -name TOP_LEVEL_ENTITY topo
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:25:05  SEPTEMBER 10, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 324
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name SEARCH_PATH "d:\\documentos\\designs\\quartus\\aes\\functions"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name VHDL_FILE subBytes.vhd
+set_global_assignment -name VHDL_FILE functions/aes.vhd
+set_global_assignment -name VHDL_FILE aes.vhd
+set_global_assignment -name VHDL_FILE rom.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VHDL_FILE reg_128b.vhd
+set_global_assignment -name VHDL_FILE shiftRows.vhd
+set_global_assignment -name VHDL_FILE addRoundKey.vhd
+set_global_assignment -name VHDL_FILE mixColumns_32b.vhd
+set_global_assignment -name VHDL_FILE g_Mult.vhd
+set_global_assignment -name VHDL_FILE key_mux.vhd
+set_global_assignment -name VHDL_FILE roundKeyGen.vhd
+set_global_assignment -name VHDL_FILE mux2p1.vhd
+set_global_assignment -name VHDL_FILE counter.vhd
+set_global_assignment -name VHDL_FILE fsm.vhd
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name VHDL_FILE topo.vhd
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name VHDL_FILE testbench.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Documentos/Designs/Quartus/AES/Waveform.vwf"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"

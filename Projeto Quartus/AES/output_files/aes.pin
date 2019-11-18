@@ -1,0 +1,394 @@
+ -- Copyright (C) 1991-2013 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		2.5V
+ --					Bank 2:		2.5V
+ --					Bank 3:		2.5V
+ --					Bank 4:		2.5V
+ --					Bank 5:		2.5V
+ --					Bank 6:		2.5V
+ --					Bank 7:		2.5V
+ --					Bank 8:		2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+CHIP  "aes"  ASSIGNED TO AN: EP3C25F324C6
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+chipher[105]                 : A1        : output : 2.5 V             :         : 8         : N              
+chipher[109]                 : A2        : output : 2.5 V             :         : 8         : N              
+chipher[32]                  : A3        : output : 2.5 V             :         : 8         : N              
+chipher[99]                  : A4        : output : 2.5 V             :         : 8         : N              
+chipher[24]                  : A5        : output : 2.5 V             :         : 8         : N              
+chipher[34]                  : A6        : output : 2.5 V             :         : 8         : N              
+chipher[111]                 : A7        : output : 2.5 V             :         : 8         : N              
+chipher[77]                  : A8        : output : 2.5 V             :         : 8         : N              
+GND+                         : A9        :        :                   :         : 8         :                
+GND+                         : A10       :        :                   :         : 7         :                
+sel_m3                       : A11       : output : 2.5 V             :         : 7         : N              
+sel_m                        : A12       : output : 2.5 V             :         : 7         : N              
+chipher[102]                 : A13       : output : 2.5 V             :         : 7         : N              
+round_m[1]                   : A14       : output : 2.5 V             :         : 7         : N              
+en_c                         : A15       : output : 2.5 V             :         : 7         : N              
+en_r                         : A16       : output : 2.5 V             :         : 7         : N              
+chipher[5]                   : A17       : output : 2.5 V             :         : 7         : N              
+chipher[64]                  : A18       : output : 2.5 V             :         : 7         : N              
+chipher[54]                  : B1        : output : 2.5 V             :         : 1         : N              
+chipher[62]                  : B2        : output : 2.5 V             :         : 1         : N              
+chipher[100]                 : B3        : output : 2.5 V             :         : 8         : N              
+chipher[2]                   : B4        : output : 2.5 V             :         : 8         : N              
+chipher[29]                  : B5        : output : 2.5 V             :         : 8         : N              
+chipher[38]                  : B6        : output : 2.5 V             :         : 8         : N              
+chipher[22]                  : B7        : output : 2.5 V             :         : 8         : N              
+chipher[103]                 : B8        : output : 2.5 V             :         : 8         : N              
+GND+                         : B9        :        :                   :         : 8         :                
+GND+                         : B10       :        :                   :         : 7         :                
+chipher[70]                  : B11       : output : 2.5 V             :         : 7         : N              
+en_t                         : B12       : output : 2.5 V             :         : 7         : N              
+chipher[113]                 : B13       : output : 2.5 V             :         : 7         : N              
+chipher[69]                  : B14       : output : 2.5 V             :         : 7         : N              
+round_m[2]                   : B15       : output : 2.5 V             :         : 7         : N              
+chipher[72]                  : B16       : output : 2.5 V             :         : 7         : N              
+chipher[50]                  : B17       : output : 2.5 V             :         : 6         : N              
+chipher[58]                  : B18       : output : 2.5 V             :         : 6         : N              
+chipher[107]                 : C1        : output : 2.5 V             :         : 1         : N              
+chipher[108]                 : C2        : output : 2.5 V             :         : 1         : N              
+chipher[20]                  : C3        : output : 2.5 V             :         : 1         : N              
+GND                          : C4        : gnd    :                   :         :           :                
+chipher[61]                  : C5        : output : 2.5 V             :         : 8         : N              
+GND                          : C6        : gnd    :                   :         :           :                
+chipher[42]                  : C7        : output : 2.5 V             :         : 8         : N              
+GND                          : C8        : gnd    :                   :         :           :                
+chipher[35]                  : C9        : output : 2.5 V             :         : 8         : N              
+round_m[0]                   : C10       : output : 2.5 V             :         : 7         : N              
+GND                          : C11       : gnd    :                   :         :           :                
+en_rk2                       : C12       : output : 2.5 V             :         : 7         : N              
+GND                          : C13       : gnd    :                   :         :           :                
+chipher[110]                 : C14       : output : 2.5 V             :         : 7         : N              
+GND                          : C15       : gnd    :                   :         :           :                
+chipher[74]                  : C16       : output : 2.5 V             :         : 7         : N              
+state[0]                     : C17       : output : 2.5 V             :         : 6         : N              
+chipher[66]                  : C18       : output : 2.5 V             :         : 6         : N              
+~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D1        : input  : 2.5 V             :         : 1         : N              
+chipher[27]                  : D2        : output : 2.5 V             :         : 1         : N              
+chipher[19]                  : D3        : output : 2.5 V             :         : 1         : N              
+VCCIO8                       : D4        : power  :                   : 2.5V    : 8         :                
+chipher[23]                  : D5        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : D6        : power  :                   : 2.5V    : 8         :                
+chipher[75]                  : D7        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : D8        : power  :                   : 2.5V    : 8         :                
+chipher[96]                  : D9        : output : 2.5 V             :         : 8         : N              
+chipher[97]                  : D10       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : D11       : power  :                   : 2.5V    : 7         :                
+chipher[49]                  : D12       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : D13       : power  :                   : 2.5V    : 7         :                
+chipher[36]                  : D14       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : D15       : power  :                   : 2.5V    : 7         :                
+chipher[68]                  : D16       : output : 2.5 V             :         : 7         : N              
+chipher[52]                  : D17       : output : 2.5 V             :         : 6         : N              
+chipher[60]                  : D18       : output : 2.5 V             :         : 6         : N              
+chipher[31]                  : E1        : output : 2.5 V             :         : 1         : N              
+~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
+GND                          : E3        : gnd    :                   :         :           :                
+VCCA3                        : E4        : power  :                   : 2.5V    :           :                
+GNDA3                        : E5        : gnd    :                   :         :           :                
+chipher[104]                 : E6        : output : 2.5 V             :         : 8         : N              
+chipher[65]                  : E7        : output : 2.5 V             :         : 8         : N              
+chipher[101]                 : E8        : output : 2.5 V             :         : 8         : N              
+chipher[73]                  : E9        : output : 2.5 V             :         : 8         : N              
+chipher[21]                  : E10       : output : 2.5 V             :         : 8         : N              
+chipher[37]                  : E11       : output : 2.5 V             :         : 7         : N              
+chipher[79]                  : E12       : output : 2.5 V             :         : 7         : N              
+chipher[71]                  : E13       : output : 2.5 V             :         : 7         : N              
+state[2]                     : E14       : output : 2.5 V             :         : 7         : N              
+VCCD_PLL2                    : E15       : power  :                   : 1.2V    :           :                
+GND                          : E16       : gnd    :                   :         :           :                
+chipher[47]                  : E17       : output : 2.5 V             :         : 6         : N              
+~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : E18       : output : 2.5 V             :         : 6         : N              
+GND+                         : F1        :        :                   :         : 1         :                
+GND+                         : F2        :        :                   :         : 1         :                
+chipher[30]                  : F3        : output : 2.5 V             :         : 1         : N              
+VCCIO1                       : F4        : power  :                   : 2.5V    : 1         :                
+VCCD_PLL3                    : F5        : power  :                   : 1.2V    :           :                
+chipher[78]                  : F6        : output : 2.5 V             :         : 8         : N              
+chipher[106]                 : F7        : output : 2.5 V             :         : 8         : N              
+chipher[56]                  : F8        : output : 2.5 V             :         : 8         : N              
+round_m[3]                   : F9        : output : 2.5 V             :         : 8         : N              
+en_ra                        : F10       : output : 2.5 V             :         : 7         : N              
+chipher[98]                  : F11       : output : 2.5 V             :         : 7         : N              
+state[1]                     : F12       : output : 2.5 V             :         : 7         : N              
+chipher[26]                  : F13       : output : 2.5 V             :         : 7         : N              
+VCCA2                        : F14       : power  :                   : 2.5V    :           :                
+GNDA2                        : F15       : gnd    :                   :         :           :                
+VCCIO6                       : F16       : power  :                   : 2.5V    : 6         :                
+GND+                         : F17       :        :                   :         : 6         :                
+GND+                         : F18       :        :                   :         : 6         :                
+chipher[46]                  : G1        : output : 2.5 V             :         : 1         : N              
+chipher[16]                  : G2        : output : 2.5 V             :         : 1         : N              
+GND                          : G3        : gnd    :                   :         :           :                
+VCCIO1                       : G4        : power  :                   : 2.5V    : 1         :                
+nSTATUS                      : G5        :        :                   :         : 1         :                
+chipher[94]                  : G6        : output : 2.5 V             :         : 8         : N              
+VCCINT                       : G7        : power  :                   : 1.2V    :           :                
+VCCINT                       : G8        : power  :                   : 1.2V    :           :                
+GND                          : G9        : gnd    :                   :         :           :                
+VCCINT                       : G10       : power  :                   : 1.2V    :           :                
+VCCINT                       : G11       : power  :                   : 1.2V    :           :                
+VCCINT                       : G12       : power  :                   : 1.2V    :           :                
+chipher[67]                  : G13       : output : 2.5 V             :         : 7         : N              
+chipher[76]                  : G14       : output : 2.5 V             :         : 6         : N              
+VCCIO6                       : G15       : power  :                   : 2.5V    : 6         :                
+GND                          : G16       : gnd    :                   :         :           :                
+chipher[11]                  : G17       : output : 2.5 V             :         : 6         : N              
+chipher[3]                   : G18       : output : 2.5 V             :         : 6         : N              
+chipher[44]                  : H1        : output : 2.5 V             :         : 1         : N              
+chipher[83]                  : H2        : output : 2.5 V             :         : 1         : N              
+~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H3        : input  : 2.5 V             :         : 1         : N              
+~ALTERA_DCLK~                : H4        : output : 2.5 V             :         : 1         : N              
+nCONFIG                      : H5        :        :                   :         : 1         :                
+chipher[17]                  : H6        : output : 2.5 V             :         : 1         : N              
+VCCINT                       : H7        : power  :                   : 1.2V    :           :                
+GND                          : H8        : gnd    :                   :         :           :                
+GND                          : H9        : gnd    :                   :         :           :                
+GND                          : H10       : gnd    :                   :         :           :                
+GND                          : H11       : gnd    :                   :         :           :                
+VCCINT                       : H12       : power  :                   : 1.2V    :           :                
+chipher[18]                  : H13       : output : 2.5 V             :         : 6         : N              
+chipher[25]                  : H14       : output : 2.5 V             :         : 6         : N              
+chipher[55]                  : H15       : output : 2.5 V             :         : 6         : N              
+chipher[57]                  : H16       : output : 2.5 V             :         : 6         : N              
+chipher[127]                 : H17       : output : 2.5 V             :         : 6         : N              
+chipher[33]                  : H18       : output : 2.5 V             :         : 6         : N              
+TCK                          : J1        : input  :                   :         : 1         :                
+TMS                          : J2        : input  :                   :         : 1         :                
+GND                          : J3        : gnd    :                   :         :           :                
+VCCIO1                       : J4        : power  :                   : 2.5V    : 1         :                
+TDO                          : J5        : output :                   :         : 1         :                
+TDI                          : J6        : input  :                   :         : 1         :                
+VCCINT                       : J7        : power  :                   : 1.2V    :           :                
+GND                          : J8        : gnd    :                   :         :           :                
+GND                          : J9        : gnd    :                   :         :           :                
+GND                          : J10       : gnd    :                   :         :           :                
+GND                          : J11       : gnd    :                   :         :           :                
+VCCINT                       : J12       : power  :                   : 1.2V    :           :                
+chipher[91]                  : J13       : output : 2.5 V             :         : 6         : N              
+MSEL3                        : J14       :        :                   :         : 6         :                
+VCCIO6                       : J15       : power  :                   : 2.5V    : 6         :                
+GND                          : J16       : gnd    :                   :         :           :                
+MSEL2                        : J17       :        :                   :         : 6         :                
+MSEL1                        : J18       :        :                   :         : 6         :                
+chipher[8]                   : K1        : output : 2.5 V             :         : 2         : N              
+chipher[14]                  : K2        : output : 2.5 V             :         : 2         : N              
+GND                          : K3        : gnd    :                   :         :           :                
+VCCIO2                       : K4        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 2         :                
+nCE                          : K6        :        :                   :         : 1         :                
+VCCINT                       : K7        : power  :                   : 1.2V    :           :                
+GND                          : K8        : gnd    :                   :         :           :                
+GND                          : K9        : gnd    :                   :         :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+GND                          : K11       : gnd    :                   :         :           :                
+VCCINT                       : K12       : power  :                   : 1.2V    :           :                
+MSEL0                        : K13       :        :                   :         : 6         :                
+CONF_DONE                    : K14       :        :                   :         : 6         :                
+VCCIO5                       : K15       : power  :                   : 2.5V    : 5         :                
+GND                          : K16       : gnd    :                   :         :           :                
+chipher[90]                  : K17       : output : 2.5 V             :         : 5         : N              
+chipher[4]                   : K18       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L6        :        :                   :         : 2         :                
+VCCINT                       : L7        : power  :                   : 1.2V    :           :                
+GND                          : L8        : gnd    :                   :         :           :                
+GND                          : L9        : gnd    :                   :         :           :                
+GND                          : L10       : gnd    :                   :         :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+VCCINT                       : L12       : power  :                   : 1.2V    :           :                
+chipher[92]                  : L13       : output : 2.5 V             :         : 5         : N              
+chipher[7]                   : L14       : output : 2.5 V             :         : 5         : N              
+chipher[43]                  : L15       : output : 2.5 V             :         : 5         : N              
+chipher[95]                  : L16       : output : 2.5 V             :         : 5         : N              
+chipher[84]                  : L17       : output : 2.5 V             :         : 5         : N              
+chipher[89]                  : L18       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 2         :                
+VCCIO2                       : M4        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3         :                
+VCCINT                       : M7        : power  :                   : 1.2V    :           :                
+VCCINT                       : M8        : power  :                   : 1.2V    :           :                
+VCCINT                       : M9        : power  :                   : 1.2V    :           :                
+GND                          : M10       : gnd    :                   :         :           :                
+VCCINT                       : M11       : power  :                   : 1.2V    :           :                
+VCCINT                       : M12       : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M13       :        :                   :         : 4         :                
+chipher[15]                  : M14       : output : 2.5 V             :         : 5         : N              
+VCCIO5                       : M15       : power  :                   : 2.5V    : 5         :                
+GND                          : M16       : gnd    :                   :         :           :                
+chipher[112]                 : M17       : output : 2.5 V             :         : 5         : N              
+chipher[40]                  : M18       : output : 2.5 V             :         : 5         : N              
+GND+                         : N1        :        :                   :         : 2         :                
+reset_n                      : N2        : input  : 2.5 V             :         : 2         : Y              
+GND                          : N3        : gnd    :                   :         :           :                
+VCCIO2                       : N4        : power  :                   : 2.5V    : 2         :                
+VCCA1                        : N5        : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 3         :                
+chipher[12]                  : N10       : output : 2.5 V             :         : 4         : N              
+chipher[93]                  : N11       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N12       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N13       :        :                   :         : 4         :                
+VCCA4                        : N14       : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 5         :                
+chipher[63]                  : N16       : output : 2.5 V             :         : 5         : N              
+GND+                         : N17       :        :                   :         : 5         :                
+GND+                         : N18       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P2        :        :                   :         : 2         :                
+GND                          : P3        : gnd    :                   :         :           :                
+VCCD_PLL1                    : P4        : power  :                   : 1.2V    :           :                
+GNDA1                        : P5        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 3         :                
+chipher[10]                  : P9        : output : 2.5 V             :         : 3         : N              
+chipher[39]                  : P10       : output : 2.5 V             :         : 4         : N              
+chipher[86]                  : P11       : output : 2.5 V             :         : 4         : N              
+chipher[51]                  : P12       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P13       :        :                   :         : 4         :                
+GNDA4                        : P14       : gnd    :                   :         :           :                
+VCCD_PLL4                    : P15       : power  :                   : 1.2V    :           :                
+GND                          : P16       : gnd    :                   :         :           :                
+chipher[117]                 : P17       : output : 2.5 V             :         : 5         : N              
+chipher[82]                  : P18       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
+VCCIO3                       : R6        : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : R7        : power  :                   : 2.5V    : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R8        :        :                   :         : 3         :                
+VCCIO3                       : R9        : power  :                   : 2.5V    : 3         :                
+VCCIO4                       : R10       : power  :                   : 2.5V    : 4         :                
+chipher[85]                  : R11       : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : R12       : power  :                   : 2.5V    : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                
+VCCIO4                       : R14       : power  :                   : 2.5V    : 4         :                
+VCCIO5                       : R15       : power  :                   : 2.5V    : 5         :                
+chipher[0]                   : R16       : output : 2.5 V             :         : 5         : N              
+chipher[87]                  : R17       : output : 2.5 V             :         : 5         : N              
+chipher[126]                 : R18       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :         : 3         :                
+GND                          : T5        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 3         :                
+GND                          : T7        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 3         :                
+GND                          : T9        : gnd    :                   :         :           :                
+GND                          : T10       : gnd    :                   :         :           :                
+chipher[48]                  : T11       : output : 2.5 V             :         : 4         : N              
+GND                          : T12       : gnd    :                   :         :           :                
+chipher[123]                 : T13       : output : 2.5 V             :         : 4         : N              
+chipher[114]                 : T14       : output : 2.5 V             :         : 4         : N              
+GND                          : T15       : gnd    :                   :         :           :                
+chipher[28]                  : T16       : output : 2.5 V             :         : 5         : N              
+chipher[124]                 : T17       : output : 2.5 V             :         : 5         : N              
+chipher[120]                 : T18       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 3         :                
+chipher[1]                   : U7        : output : 2.5 V             :         : 3         : N              
+chipher[122]                 : U8        : output : 2.5 V             :         : 3         : N              
+GND+                         : U9        :        :                   :         : 3         :                
+GND+                         : U10       :        :                   :         : 4         :                
+chipher[121]                 : U11       : output : 2.5 V             :         : 4         : N              
+chipher[118]                 : U12       : output : 2.5 V             :         : 4         : N              
+chipher[115]                 : U13       : output : 2.5 V             :         : 4         : N              
+chipher[45]                  : U14       : output : 2.5 V             :         : 4         : N              
+chipher[88]                  : U15       : output : 2.5 V             :         : 4         : N              
+chipher[53]                  : U16       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U17       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U18       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V2        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 3         :                
+chipher[13]                  : V6        : output : 2.5 V             :         : 3         : N              
+chipher[125]                 : V7        : output : 2.5 V             :         : 3         : N              
+chipher[9]                   : V8        : output : 2.5 V             :         : 3         : N              
+osc_clk                      : V9        : input  : 2.5 V             :         : 3         : Y              
+GND+                         : V10       :        :                   :         : 4         :                
+chipher[119]                 : V11       : output : 2.5 V             :         : 4         : N              
+chipher[6]                   : V12       : output : 2.5 V             :         : 4         : N              
+chipher[116]                 : V13       : output : 2.5 V             :         : 4         : N              
+chipher[80]                  : V14       : output : 2.5 V             :         : 4         : N              
+chipher[59]                  : V15       : output : 2.5 V             :         : 4         : N              
+chipher[41]                  : V16       : output : 2.5 V             :         : 4         : N              
+chipher[81]                  : V17       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V18       :        :                   :         : 4         :                

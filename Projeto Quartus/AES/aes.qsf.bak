@@ -1,0 +1,246 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 11:25:05  September 10, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		aes_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C25F324C6
+set_global_assignment -name TOP_LEVEL_ENTITY topo
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:25:05  SEPTEMBER 10, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 324
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name SEARCH_PATH "d:\\documentos\\designs\\quartus\\aes\\functions"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name VHDL_FILE subBytes.vhd
+set_global_assignment -name VHDL_FILE functions/aes.vhd
+set_global_assignment -name VHDL_FILE aes.vhd
+set_global_assignment -name VHDL_FILE rom.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VHDL_FILE reg_128b.vhd
+set_global_assignment -name VHDL_FILE shiftRows.vhd
+set_global_assignment -name VHDL_FILE addRoundKey.vhd
+set_global_assignment -name VHDL_FILE mixColumns_32b.vhd
+set_global_assignment -name VHDL_FILE g_Mult.vhd
+set_global_assignment -name VHDL_FILE key_mux.vhd
+set_global_assignment -name VHDL_FILE roundKeyGen.vhd
+set_global_assignment -name VHDL_FILE mux2p1.vhd
+set_global_assignment -name VHDL_FILE counter.vhd
+set_global_assignment -name VHDL_FILE fsm.vhd
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name VHDL_FILE topo.vhd
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name VHDL_FILE testbench.vhd
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_A14 -to chipher[127]
+set_location_assignment PIN_B6 -to chipher[126]
+set_location_assignment PIN_E9 -to chipher[125]
+set_location_assignment PIN_E12 -to chipher[124]
+set_location_assignment PIN_A2 -to chipher[123]
+set_location_assignment PIN_P8 -to chipher[122]
+set_location_assignment PIN_B14 -to chipher[121]
+set_location_assignment PIN_C10 -to chipher[120]
+set_location_assignment PIN_R8 -to chipher[119]
+set_location_assignment PIN_C17 -to chipher[118]
+set_location_assignment PIN_E7 -to chipher[117]
+set_location_assignment PIN_M18 -to chipher[116]
+set_location_assignment PIN_B5 -to chipher[115]
+set_location_assignment PIN_E13 -to chipher[114]
+set_location_assignment PIN_B3 -to chipher[113]
+set_location_assignment PIN_C7 -to chipher[112]
+set_location_assignment PIN_G17 -to chipher[111]
+set_location_assignment PIN_R2 -to chipher[110]
+set_location_assignment PIN_D12 -to chipher[109]
+set_location_assignment PIN_A12 -to chipher[108]
+set_location_assignment PIN_T6 -to chipher[107]
+set_location_assignment PIN_B13 -to chipher[106]
+set_location_assignment PIN_D10 -to chipher[105]
+set_location_assignment PIN_H15 -to chipher[104]
+set_location_assignment PIN_J13 -to chipher[103]
+set_location_assignment PIN_L17 -to chipher[102]
+set_location_assignment PIN_C5 -to chipher[101]
+set_location_assignment PIN_K18 -to chipher[100]
+set_location_assignment PIN_C1 -to chipher[99]
+set_location_assignment PIN_A4 -to chipher[98]
+set_location_assignment PIN_V12 -to chipher[97]
+set_location_assignment PIN_A7 -to chipher[96]
+set_location_assignment PIN_P12 -to chipher[95]
+set_location_assignment PIN_U15 -to chipher[94]
+set_location_assignment PIN_U3 -to chipher[93]
+set_location_assignment PIN_G18 -to chipher[92]
+set_location_assignment PIN_A13 -to chipher[91]
+set_location_assignment PIN_M1 -to chipher[90]
+set_location_assignment PIN_L1 -to chipher[89]
+set_location_assignment PIN_N9 -to chipher[88]
+set_location_assignment PIN_L3 -to chipher[87]
+set_location_assignment PIN_U12 -to chipher[86]
+set_location_assignment PIN_V6 -to chipher[85]
+set_location_assignment PIN_K17 -to chipher[84]
+set_location_assignment PIN_V7 -to chipher[83]
+set_location_assignment PIN_V11 -to chipher[82]
+set_location_assignment PIN_L2 -to chipher[81]
+set_location_assignment PIN_U11 -to chipher[80]
+set_location_assignment PIN_R1 -to chipher[79]
+set_location_assignment PIN_H16 -to chipher[78]
+set_location_assignment PIN_F10 -to chipher[77]
+set_location_assignment PIN_E1 -to chipher[76]
+set_location_assignment PIN_B4 -to chipher[75]
+set_location_assignment PIN_H14 -to chipher[74]
+set_location_assignment PIN_H2 -to chipher[73]
+set_location_assignment PIN_P1 -to chipher[72]
+set_location_assignment PIN_A3 -to chipher[71]
+set_location_assignment PIN_T2 -to chipher[70]
+set_location_assignment PIN_B15 -to chipher[69]
+set_location_assignment PIN_D3 -to chipher[68]
+set_location_assignment PIN_C2 -to chipher[67]
+set_location_assignment PIN_F3 -to chipher[66]
+set_location_assignment PIN_H6 -to chipher[65]
+set_location_assignment PIN_F8 -to chipher[64]
+set_location_assignment PIN_B11 -to chipher[63]
+set_location_assignment PIN_U13 -to chipher[62]
+set_location_assignment PIN_H1 -to chipher[61]
+set_location_assignment PIN_V4 -to chipher[60]
+set_location_assignment PIN_K2 -to chipher[59]
+set_location_assignment PIN_P9 -to chipher[58]
+set_location_assignment PIN_U7 -to chipher[57]
+set_location_assignment PIN_P2 -to chipher[56]
+set_location_assignment PIN_U5 -to chipher[55]
+set_location_assignment PIN_G2 -to chipher[54]
+set_location_assignment PIN_G1 -to chipher[53]
+set_location_assignment PIN_P11 -to chipher[52]
+set_location_assignment PIN_D17 -to chipher[51]
+set_location_assignment PIN_H17 -to chipher[50]
+set_location_assignment PIN_H13 -to chipher[49]
+set_location_assignment PIN_D18 -to chipher[48]
+set_location_assignment PIN_U8 -to chipher[47]
+set_location_assignment PIN_T3 -to chipher[46]
+set_location_assignment PIN_R11 -to chipher[45]
+set_location_assignment PIN_U4 -to chipher[44]
+set_location_assignment PIN_K5 -to chipher[43]
+set_location_assignment PIN_V8 -to chipher[42]
+set_location_assignment PIN_U6 -to chipher[41]
+set_location_assignment PIN_F6 -to chipher[40]
+set_location_assignment PIN_L6 -to chipher[39]
+set_location_assignment PIN_V5 -to chipher[38]
+set_location_assignment PIN_V13 -to chipher[37]
+set_location_assignment PIN_L5 -to chipher[36]
+set_location_assignment PIN_M3 -to chipher[35]
+set_location_assignment PIN_E17 -to chipher[34]
+set_location_assignment PIN_F9 -to chipher[33]
+set_location_assignment PIN_V3 -to chipher[32]
+set_location_assignment PIN_A18 -to chipher[31]
+set_location_assignment PIN_A8 -to chipher[30]
+set_location_assignment PIN_D2 -to chipher[29]
+set_location_assignment PIN_A16 -to chipher[28]
+set_location_assignment PIN_B1 -to chipher[27]
+set_location_assignment PIN_F7 -to chipher[26]
+set_location_assignment PIN_C14 -to chipher[25]
+set_location_assignment PIN_B8 -to chipher[24]
+set_location_assignment PIN_D9 -to chipher[23]
+set_location_assignment PIN_A17 -to chipher[22]
+set_location_assignment PIN_G14 -to chipher[21]
+set_location_assignment PIN_E8 -to chipher[20]
+set_location_assignment PIN_D14 -to chipher[19]
+set_location_assignment PIN_V14 -to chipher[18]
+set_location_assignment PIN_B16 -to chipher[17]
+set_location_assignment PIN_F12 -to chipher[16]
+set_location_assignment PIN_F11 -to chipher[15]
+set_location_assignment PIN_C9 -to chipher[14]
+set_location_assignment PIN_A11 -to chipher[13]
+set_location_assignment PIN_G6 -to chipher[12]
+set_location_assignment PIN_C3 -to chipher[11]
+set_location_assignment PIN_M2 -to chipher[10]
+set_location_assignment PIN_E14 -to chipher[9]
+set_location_assignment PIN_E11 -to chipher[8]
+set_location_assignment PIN_D5 -to chipher[7]
+set_location_assignment PIN_A15 -to chipher[6]
+set_location_assignment PIN_B12 -to chipher[5]
+set_location_assignment PIN_C12 -to chipher[4]
+set_location_assignment PIN_A5 -to chipher[3]
+set_location_assignment PIN_E6 -to chipher[2]
+set_location_assignment PIN_C16 -to chipher[1]
+set_location_assignment PIN_C18 -to chipher[0]
+set_location_assignment PIN_F2 -to clk_m
+set_location_assignment PIN_K1 -to en_c
+set_location_assignment PIN_T8 -to en_r
+set_location_assignment PIN_A6 -to en_ra
+set_location_assignment PIN_B7 -to en_t
+set_location_assignment PIN_F18 -to reset_m
+set_location_assignment PIN_P10 -to round_m[3]
+set_location_assignment PIN_A1 -to round_m[2]
+set_location_assignment PIN_L18 -to round_m[1]
+set_location_assignment PIN_U14 -to round_m[0]
+set_location_assignment PIN_D7 -to sel_m
+set_location_assignment PIN_E10 -to sel_m3
+set_location_assignment PIN_T1 -to state[2]
+set_location_assignment PIN_L4 -to state[1]
+set_location_assignment PIN_H18 -to state[0]
+set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -section_id eda_simulation
+set_global_assignment -name EDA_MAP_ILLEGAL_CHARACTERS OFF -section_id eda_simulation
+set_global_assignment -name EDA_ENABLE_GLITCH_FILTERING OFF -section_id eda_simulation
+set_global_assignment -name EDA_WRITE_NODES_FOR_POWER_ESTIMATION OFF -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_DESIGN_INSTANCE_NAME tudo -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME tudo -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "5 us" -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
+set_global_assignment -name EDA_FORMAL_VERIFICATION_TOOL "Conformal LEC"
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
+set_global_assignment -name POWER_OUTPUT_SAF_NAME aes.rpt
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
+set_global_assignment -name POWER_REPORT_SIGNAL_ACTIVITY ON
+set_global_assignment -name POWER_REPORT_POWER_DISSIPATION ON
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench.vhd -section_id testbench
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Documentos/Designs/Quartus/AES/Waveform.vwf"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

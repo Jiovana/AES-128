@@ -1,0 +1,163 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity operational is
+	port(
+		clk_top	 : in std_logic;
+		reset_top : in std_logic;
+		enable_top : in std_logic;
+		enable_regkey : in std_logic;
+		enable_count : in std_logic;
+		enable_regadd : in std_logic;
+		selMux : in std_logic;
+		selMux3 : in std_logic;
+		state : in std_logic_vector(127 downto 0);
+		key   : in std_logic_vector(127 downto 0);
+		
+		round_top : out integer range 0 to 11;
+		chipher_text : out std_logic_vector(127 downto 0)
+	);
+end entity;
+--
+--
+architecture rtl of operational is
+	signal outReg_sub, outSub, outShift, outReg_shift, outAdd, outReg_add,  outReg_mix, outKeyGen, outReg_key, outAdd1, outMux, outMux2, outMux3, temp_mix: std_logic_vector(127 downto 0);
+	signal round : integer range 0 to 11;
+	signal inmix0,inmix1,inmix2,inmix3, outMix0,outMix1,outMix2,outMix3 : std_logic_vector(31 downto 0);
+	
+	component subBytes is 
+		port(
+			state_in: in std_logic_vector(127 downto 0);
+			clk_sub : in std_logic;
+			state_out: out std_logic_vector(127 downto 0)
+		);
+	end component;
+	
+	component shiftRows is 
+		port(
+			state_in: in std_logic_vector(127 downto 0);
+			state_out: out std_logic_vector(127 downto 0)
+		);
+	end component;
+--	
+	component reg_128b is
+		port(
+			clk		: in std_logic;
+			enable	: in std_logic;
+			d	      : in std_logic_vector(127 downto 0);
+			q			: out std_logic_vector(127 downto 0)
+		);
+	end component;
+	
+	component mixColumns_32b is
+		port(
+			word_state_in: in std_logic_vector(31 downto 0);
+			word_state_out: out std_logic_vector(31 downto 0)
+		);
+	end component;
+	
+	component addRoundKey is
+		port(
+			state_in: in std_logic_vector(127 downto 0);
+			round_key: in std_logic_vector(127 downto 0);
+			state_out: out std_logic_vector(127 downto 0)
+		);
+	end component;
+	
+	component roundKeyGen is
+		port(
+			roundkey_in : in std_logic_vector(127 downto 0);
+			round_num : in integer range 0 to 10;
+			clk_key : in std_logic; 
+			roundkey_out : out std_logic_vector(127 downto 0)
+		);
+	end component;
+	
+	component mux2p1 is
+		port (
+			a	   : in std_logic_vector  (127 downto 0);
+			b	   : in std_logic_vector  (127 downto 0);
+			sel   : in std_logic;
+			result : out std_logic_vector (127 downto 0)
+		);
+	end component;
+	
+	component binary_counter is
+		port(
+			clk		  : in std_logic;
+			reset	  : in std_logic;
+			enable	  : in std_logic;
+			q		  : out integer range 0 to 11
+		);
+	end component;
+	
+begin
+	add : addRoundKey
+		port map ( state_in => state, round_key => key, state_out => outAdd);
+		
+	mux1 : mux2p1
+		port map (a => outAdd, b => outAdd1, sel => selMux, result => outMux);
+	
+	reg_add : reg_128b
+		port map (clk => clk_top, enable => enable_regadd, d => outMux, q => outReg_add );
+
+	sub : subBytes
+		port map ( state_in => outReg_add, clk_sub => clk_top, state_out =>  outSub );
+		
+	shift : shiftRows
+		port map ( state_in => outReg_sub, state_out =>  outShift );
+	
+	reg_sub : reg_128b
+		port map ( clk => clk_top, enable => enable_top, d => outSub, q => outReg_sub);
+		
+	reg_shift : reg_128b
+		port map ( clk => clk_top, enable => enable_top, d => outShift, q => outReg_shift);
+				
+	temp_mix <= (outMix0&outMix1&outMix2&outMix3);
+	
+	mux3 : mux2p1
+		port map (a => temp_mix, b => outShift, sel => selMux3, result => outMux3);
+		
+	inmix0 <= outReg_shift(127 downto 96);
+	inmix1 <= outReg_shift(95 downto 64);
+	inmix2 <= outReg_shift(63 downto 32);
+	inmix3 <= outReg_shift(31 downto 0);
+	
+	mix0 : mixColumns_32b 
+		port map (word_state_in => inmix0 , word_state_out => outMix0);
+				
+	mix1 : mixColumns_32b 
+		port map (word_state_in => inmix1, word_state_out => outMix1);
+	
+	mix2 : mixColumns_32b 
+		port map (word_state_in => inmix2, word_state_out => outMix2);
+	
+	mix3 : mixColumns_32b 
+		port map (word_state_in => inmix3, word_state_out => outMix3);
+			
+	reg_mix : reg_128b
+		port map ( clk => clk_top, enable => enable_top, d => outMux3, q => outReg_Mix);
+		
+--	keyGen : roundKeyGen
+--		port map ( roundkey_in => outReg_key, round_num => round, clk_key => clk_top, roundkey_out => outKeyGen);
+--	
+--	mux2 : mux2p1
+--		port map (a => key, b => outKeyGen, sel => selMux, result => outMux2);
+----	
+--	reg_key : reg_128b
+--		port map ( clk => clk_top, enable => enable_regkey, d => outMux2, q => outReg_key);
+--		
+--	add1 : addRoundKey
+--		port map ( state_in => outReg_Mix, round_key => outReg_key, state_out => outAdd1);
+
+	add1 : addRoundKey
+		port map ( state_in => outReg_Mix, round_key => key, state_out => outAdd1);
+		
+	count : binary_counter
+		port map (clk => clk_top, reset => reset_top, enable => enable_count, q => round);
+		
+	chipher_text <= outReg_add;
+	round_top <= round;
+
+end rtl;

@@ -1,0 +1,1190 @@
+Partition Merge report for aes
+Mon Nov 18 16:14:20 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Partition Merge Partition Warnings
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge RAM Summary
+  9. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Partition Merge Summary                                                              ;
++------------------------------------+-------------------------------------------------+
+; Partition Merge Status             ; Successful - Mon Nov 18 16:14:20 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; aes                                             ;
+; Top-level Entity Name              ; aes                                             ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 876                                             ;
+;     Total combinational functions  ; 620                                             ;
+;     Dedicated logic registers      ; 684                                             ;
+; Total registers                    ; 684                                             ;
+; Total pins                         ; 144                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 20,480                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                                                             ;
++--------------------------------+----------------+-------------------+------------------------+-----------------------------------------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents                                              ;
++--------------------------------+----------------+-------------------+------------------------+-----------------------------------------------------------------+
+; Top                            ; User-created   ; Source File       ; Source File            ;                                                                 ;
+; altsyncram:rom_rtl_0           ; Auto-generated ; Source File       ; Source File            ; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0       ;
+; altsyncram:rom_rtl_0_10        ; Auto-generated ; Source File       ; Source File            ; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0       ;
+; altsyncram:rom_rtl_0_2         ; Auto-generated ; Source File       ; Source File            ; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0 ;
+; altsyncram:rom_rtl_0_3         ; Auto-generated ; Source File       ; Source File            ; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0       ;
+; altsyncram:rom_rtl_0_4         ; Auto-generated ; Source File       ; Source File            ; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0       ;
+; altsyncram:rom_rtl_0_5         ; Auto-generated ; Source File       ; Source File            ; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0 ;
+; altsyncram:rom_rtl_0_6         ; Auto-generated ; Source File       ; Source File            ; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0       ;
+; altsyncram:rom_rtl_0_7         ; Auto-generated ; Source File       ; Source File            ; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0       ;
+; altsyncram:rom_rtl_0_8         ; Auto-generated ; Source File       ; Source File            ; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0       ;
+; altsyncram:rom_rtl_0_9         ; Auto-generated ; Source File       ; Source File            ; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0       ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst                                  ;
++--------------------------------+----------------+-------------------+------------------------+-----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Warnings                                                                                   ;
++--------------------------------------------------------------------------------+-------------------------+-----------+
+; Port                                                                           ; Partition               ; Info      ;
++--------------------------------------------------------------------------------+-------------------------+-----------+
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|wren_a               ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|rden_a               ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|wren_b               ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|rden_b               ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_a[0]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_a[1]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_a[2]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_a[3]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_a[4]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_a[5]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_a[6]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_a[7]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_b[0]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_b[1]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_b[2]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_b[3]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_b[4]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_b[5]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_b[6]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|data_b[7]            ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|addressstall_a       ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|addressstall_b       ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|clock1               ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|clocken0             ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|clocken1             ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|clocken2             ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|clocken3             ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|aclr0                ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|aclr1                ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|byteena_a[0]         ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|byteena_b[0]         ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|eccstatus[0]         ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|eccstatus[1]         ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|eccstatus[2]         ; altsyncram:rom_rtl_0    ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|wren_a               ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|rden_a               ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|wren_b               ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|rden_b               ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_a[0]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_a[1]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_a[2]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_a[3]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_a[4]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_a[5]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_a[6]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_a[7]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_b[0]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_b[1]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_b[2]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_b[3]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_b[4]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_b[5]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_b[6]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|data_b[7]            ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|addressstall_a       ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|addressstall_b       ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|clock1               ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|clocken0             ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|clocken1             ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|clocken2             ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|clocken3             ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|aclr0                ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|aclr1                ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|byteena_a[0]         ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|byteena_b[0]         ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|eccstatus[0]         ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|eccstatus[1]         ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|eccstatus[2]         ; altsyncram:rom_rtl_0_10 ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|wren_a         ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|rden_a         ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|wren_b         ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|rden_b         ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_a[0]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_a[1]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_a[2]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_a[3]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_a[4]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_a[5]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_a[6]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_a[7]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_b[0]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_b[1]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_b[2]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_b[3]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_b[4]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_b[5]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_b[6]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|data_b[7]      ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|addressstall_a ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|addressstall_b ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|clock1         ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|clocken0       ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|clocken1       ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|clocken2       ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|clocken3       ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|aclr0          ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|aclr1          ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|byteena_a[0]   ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|byteena_b[0]   ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|eccstatus[0]   ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|eccstatus[1]   ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|eccstatus[2]   ; altsyncram:rom_rtl_0_2  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|wren_a               ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|rden_a               ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|wren_b               ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|rden_b               ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_a[0]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_a[1]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_a[2]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_a[3]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_a[4]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_a[5]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_a[6]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_a[7]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_b[0]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_b[1]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_b[2]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_b[3]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_b[4]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_b[5]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_b[6]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|data_b[7]            ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|addressstall_a       ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|addressstall_b       ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|clock1               ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|clocken0             ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|clocken1             ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|clocken2             ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|clocken3             ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|aclr0                ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|aclr1                ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|byteena_a[0]         ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|byteena_b[0]         ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|eccstatus[0]         ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|eccstatus[1]         ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|eccstatus[2]         ; altsyncram:rom_rtl_0_3  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|wren_a               ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|rden_a               ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|wren_b               ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|rden_b               ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_a[0]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_a[1]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_a[2]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_a[3]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_a[4]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_a[5]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_a[6]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_a[7]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_b[0]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_b[1]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_b[2]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_b[3]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_b[4]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_b[5]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_b[6]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|data_b[7]            ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|addressstall_a       ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|addressstall_b       ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|clock1               ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|clocken0             ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|clocken1             ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|clocken2             ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|clocken3             ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|aclr0                ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|aclr1                ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|byteena_a[0]         ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|byteena_b[0]         ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|eccstatus[0]         ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|eccstatus[1]         ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|eccstatus[2]         ; altsyncram:rom_rtl_0_4  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|wren_a         ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|rden_a         ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|wren_b         ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|rden_b         ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_a[0]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_a[1]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_a[2]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_a[3]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_a[4]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_a[5]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_a[6]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_a[7]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_b[0]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_b[1]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_b[2]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_b[3]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_b[4]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_b[5]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_b[6]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|data_b[7]      ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|addressstall_a ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|addressstall_b ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|clock1         ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|clocken0       ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|clocken1       ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|clocken2       ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|clocken3       ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|aclr0          ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|aclr1          ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|byteena_a[0]   ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|byteena_b[0]   ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|eccstatus[0]   ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|eccstatus[1]   ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|eccstatus[2]   ; altsyncram:rom_rtl_0_5  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|wren_a               ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|rden_a               ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|wren_b               ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|rden_b               ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_a[0]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_a[1]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_a[2]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_a[3]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_a[4]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_a[5]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_a[6]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_a[7]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_b[0]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_b[1]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_b[2]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_b[3]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_b[4]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_b[5]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_b[6]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|data_b[7]            ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|addressstall_a       ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|addressstall_b       ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|clock1               ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|clocken0             ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|clocken1             ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|clocken2             ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|clocken3             ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|aclr0                ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|aclr1                ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|byteena_a[0]         ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|byteena_b[0]         ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|eccstatus[0]         ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|eccstatus[1]         ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|eccstatus[2]         ; altsyncram:rom_rtl_0_6  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|wren_a               ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|rden_a               ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|wren_b               ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|rden_b               ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_a[0]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_a[1]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_a[2]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_a[3]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_a[4]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_a[5]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_a[6]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_a[7]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_b[0]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_b[1]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_b[2]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_b[3]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_b[4]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_b[5]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_b[6]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|data_b[7]            ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|addressstall_a       ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|addressstall_b       ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|clock1               ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|clocken0             ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|clocken1             ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|clocken2             ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|clocken3             ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|aclr0                ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|aclr1                ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|byteena_a[0]         ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|byteena_b[0]         ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|eccstatus[0]         ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|eccstatus[1]         ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|eccstatus[2]         ; altsyncram:rom_rtl_0_7  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|wren_a               ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|rden_a               ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|wren_b               ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|rden_b               ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_a[0]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_a[1]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_a[2]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_a[3]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_a[4]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_a[5]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_a[6]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_a[7]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_b[0]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_b[1]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_b[2]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_b[3]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_b[4]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_b[5]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_b[6]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|data_b[7]            ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|addressstall_a       ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|addressstall_b       ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|clock1               ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|clocken0             ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|clocken1             ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|clocken2             ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|clocken3             ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|aclr0                ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|aclr1                ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|byteena_a[0]         ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|byteena_b[0]         ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|eccstatus[0]         ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|eccstatus[1]         ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|eccstatus[2]         ; altsyncram:rom_rtl_0_8  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|wren_a               ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|rden_a               ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|wren_b               ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|rden_b               ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_a[0]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_a[1]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_a[2]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_a[3]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_a[4]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_a[5]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_a[6]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_a[7]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_b[0]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_b[1]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_b[2]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_b[3]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_b[4]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_b[5]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_b[6]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|data_b[7]            ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|addressstall_a       ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|addressstall_b       ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|clock1               ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|clocken0             ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|clocken1             ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|clocken2             ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|clocken3             ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|aclr0                ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|aclr1                ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|byteena_a[0]         ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|byteena_b[0]         ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|eccstatus[0]         ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|eccstatus[1]         ; altsyncram:rom_rtl_0_9  ; No fanout ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|eccstatus[2]         ; altsyncram:rom_rtl_0_9  ; No fanout ;
++--------------------------------------------------------------------------------+-------------------------+-----------+
+Note: The Incremental Compilation Advisor can be used to get more detailed recommendations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                                                                                                                                                                                                                         ;
++---------------------------------------------+------+----------------------+-------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+--------------------------------+
+; Statistic                                   ; Top  ; altsyncram:rom_rtl_0 ; altsyncram:rom_rtl_0_10 ; altsyncram:rom_rtl_0_2 ; altsyncram:rom_rtl_0_3 ; altsyncram:rom_rtl_0_4 ; altsyncram:rom_rtl_0_5 ; altsyncram:rom_rtl_0_6 ; altsyncram:rom_rtl_0_7 ; altsyncram:rom_rtl_0_8 ; altsyncram:rom_rtl_0_9 ; hard_block:auto_generated_inst ;
++---------------------------------------------+------+----------------------+-------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+--------------------------------+
+; Estimated Total logic elements              ; 866  ; 1                    ; 1                       ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Total combinational functions               ; 610  ; 1                    ; 1                       ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 0                              ;
+; Logic element usage by number of LUT inputs ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+;     -- 4 input functions                    ; 275  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- 3 input functions                    ; 110  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- <=2 input functions                  ; 225  ; 1                    ; 1                       ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Logic elements by mode                      ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+;     -- normal mode                          ; 610  ; 1                    ; 1                       ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 1                      ; 0                              ;
+;     -- arithmetic mode                      ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Total registers                             ; 684  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- Dedicated logic registers            ; 684  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Virtual pins                                ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+; I/O pins                                    ; 144  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+; Total memory bits                           ; 0    ; 2048                 ; 2048                    ; 2048                   ; 2048                   ; 2048                   ; 2048                   ; 2048                   ; 2048                   ; 2048                   ; 2048                   ; 0                              ;
+; Total RAM block bits                        ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Connections                                 ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+;     -- Input Connections                    ; 160  ; 136                  ; 136                     ; 136                    ; 136                    ; 136                    ; 136                    ; 136                    ; 136                    ; 136                    ; 136                    ; 0                              ;
+;     -- Registered Input Connections         ; 128  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- Output Connections                   ; 1360 ; 16                   ; 16                      ; 16                     ; 16                     ; 16                     ; 16                     ; 16                     ; 16                     ; 16                     ; 16                     ; 0                              ;
+;     -- Registered Output Connections        ; 1280 ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Internal Connections                        ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+;     -- Total Connections                    ; 5985 ; 152                  ; 152                     ; 152                    ; 152                    ; 152                    ; 152                    ; 152                    ; 152                    ; 152                    ; 152                    ; 0                              ;
+;     -- Registered Connections               ; 3261 ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; External Connections                        ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+;     -- Top                                  ; 0    ; 152                  ; 152                     ; 152                    ; 152                    ; 152                    ; 152                    ; 152                    ; 152                    ; 152                    ; 152                    ; 0                              ;
+;     -- altsyncram:rom_rtl_0                 ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_10              ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_2               ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_3               ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_4               ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_5               ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_6               ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_7               ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_8               ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- altsyncram:rom_rtl_0_9               ; 152  ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Partition Interface                         ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+;     -- Input Ports                          ; 2    ; 48                   ; 48                      ; 48                     ; 48                     ; 48                     ; 48                     ; 48                     ; 48                     ; 48                     ; 48                     ; 0                              ;
+;     -- Output Ports                         ; 142  ; 19                   ; 19                      ; 19                     ; 19                     ; 19                     ; 19                     ; 19                     ; 19                     ; 19                     ; 19                     ; 0                              ;
+;     -- Bidir Ports                          ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Registered Ports                            ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+;     -- Registered Input Ports               ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- Registered Output Ports              ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;                                             ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+; Port Connectivity                           ;      ;                      ;                         ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                        ;                                ;
+;     -- Input Ports driven by GND            ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- Output Ports driven by GND           ; 0    ; 3                    ; 3                       ; 3                      ; 3                      ; 3                      ; 3                      ; 3                      ; 3                      ; 3                      ; 3                      ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- Input Ports with no Source           ; 0    ; 31                   ; 31                      ; 31                     ; 31                     ; 31                     ; 31                     ; 31                     ; 31                     ; 31                     ; 31                     ; 0                              ;
+;     -- Output Ports with no Source          ; 0    ; 0                    ; 0                       ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0    ; 31                   ; 31                      ; 31                     ; 31                     ; 31                     ; 31                     ; 31                     ; 31                     ; 31                     ; 31                     ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0    ; 3                    ; 3                       ; 3                      ; 3                      ; 3                      ; 3                      ; 3                      ; 3                      ; 3                      ; 3                      ; 0                              ;
++---------------------------------------------+------+----------------------+-------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++---------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                        ;
++----------------------------+-----------+---------------+----------+-------------+
+; Name                       ; Partition ; Type          ; Location ; Status      ;
++----------------------------+-----------+---------------+----------+-------------+
+; chipher[0]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[0]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[0]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[100]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[100]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[100]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[101]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[101]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[101]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[102]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[102]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[102]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[103]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[103]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[103]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[104]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[104]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[104]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[105]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[105]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[105]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[106]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[106]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[106]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[107]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[107]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[107]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[108]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[108]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[108]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[109]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[109]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[109]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[10]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[10]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[10]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[110]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[110]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[110]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[111]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[111]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[111]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[112]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[112]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[112]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[113]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[113]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[113]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[114]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[114]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[114]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[115]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[115]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[115]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[116]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[116]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[116]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[117]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[117]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[117]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[118]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[118]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[118]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[119]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[119]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[119]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[11]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[11]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[11]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[120]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[120]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[120]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[121]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[121]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[121]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[122]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[122]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[122]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[123]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[123]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[123]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[124]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[124]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[124]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[125]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[125]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[125]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[126]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[126]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[126]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[127]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[127]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[127]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[12]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[12]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[12]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[13]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[13]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[13]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[14]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[14]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[14]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[15]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[15]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[15]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[16]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[16]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[16]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[17]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[17]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[17]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[18]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[18]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[18]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[19]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[19]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[19]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[1]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[1]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[1]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[20]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[20]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[20]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[21]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[21]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[21]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[22]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[22]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[22]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[23]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[23]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[23]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[24]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[24]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[24]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[25]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[25]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[25]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[26]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[26]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[26]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[27]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[27]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[27]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[28]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[28]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[28]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[29]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[29]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[29]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[2]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[2]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[2]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[30]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[30]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[30]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[31]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[31]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[31]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[32]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[32]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[32]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[33]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[33]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[33]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[34]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[34]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[34]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[35]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[35]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[35]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[36]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[36]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[36]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[37]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[37]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[37]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[38]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[38]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[38]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[39]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[39]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[39]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[3]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[3]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[3]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[40]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[40]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[40]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[41]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[41]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[41]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[42]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[42]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[42]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[43]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[43]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[43]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[44]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[44]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[44]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[45]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[45]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[45]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[46]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[46]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[46]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[47]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[47]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[47]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[48]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[48]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[48]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[49]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[49]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[49]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[4]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[4]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[4]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[50]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[50]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[50]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[51]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[51]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[51]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[52]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[52]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[52]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[53]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[53]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[53]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[54]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[54]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[54]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[55]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[55]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[55]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[56]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[56]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[56]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[57]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[57]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[57]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[58]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[58]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[58]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[59]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[59]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[59]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[5]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[5]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[5]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[60]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[60]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[60]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[61]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[61]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[61]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[62]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[62]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[62]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[63]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[63]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[63]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[64]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[64]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[64]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[65]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[65]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[65]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[66]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[66]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[66]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[67]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[67]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[67]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[68]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[68]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[68]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[69]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[69]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[69]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[6]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[6]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[6]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[70]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[70]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[70]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[71]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[71]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[71]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[72]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[72]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[72]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[73]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[73]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[73]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[74]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[74]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[74]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[75]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[75]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[75]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[76]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[76]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[76]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[77]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[77]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[77]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[78]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[78]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[78]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[79]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[79]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[79]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[7]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[7]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[7]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[80]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[80]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[80]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[81]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[81]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[81]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[82]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[82]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[82]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[83]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[83]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[83]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[84]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[84]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[84]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[85]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[85]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[85]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[86]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[86]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[86]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[87]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[87]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[87]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[88]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[88]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[88]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[89]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[89]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[89]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[8]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[8]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[8]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[90]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[90]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[90]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[91]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[91]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[91]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[92]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[92]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[92]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[93]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[93]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[93]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[94]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[94]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[94]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[95]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[95]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[95]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[96]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[96]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[96]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[97]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[97]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[97]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[98]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[98]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[98]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[99]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[99]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[99]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; chipher[9]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- chipher[9]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- chipher[9]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; en_c                       ; Top       ; Output Port   ; n/a      ;             ;
+;     -- en_c                ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- en_c~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; en_r                       ; Top       ; Output Port   ; n/a      ;             ;
+;     -- en_r                ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- en_r~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; en_ra                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- en_ra               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- en_ra~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; en_rk2                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- en_rk2              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- en_rk2~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; en_t                       ; Top       ; Output Port   ; n/a      ;             ;
+;     -- en_t                ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- en_t~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; osc_clk                    ; Top       ; Input Port    ; n/a      ;             ;
+;     -- osc_clk             ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- osc_clk~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; reset_n                    ; Top       ; Input Port    ; n/a      ;             ;
+;     -- reset_n             ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- reset_n~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; round_m[0]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- round_m[0]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- round_m[0]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; round_m[1]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- round_m[1]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- round_m[1]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; round_m[2]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- round_m[2]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- round_m[2]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; round_m[3]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- round_m[3]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- round_m[3]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; sel_m                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- sel_m               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- sel_m~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; sel_m3                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- sel_m3              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- sel_m3~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; state[0]                   ; Top       ; Output Port   ; n/a      ;             ;
+;     -- state[0]            ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- state[0]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; state[1]                   ; Top       ; Output Port   ; n/a      ;             ;
+;     -- state[1]            ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- state[1]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
+; state[2]                   ; Top       ; Output Port   ; n/a      ;             ;
+;     -- state[2]            ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- state[2]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                            ;           ;               ;          ;             ;
++----------------------------+-----------+---------------+----------+-------------+
+
+
++-------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                      ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 876           ;
+;                                             ;               ;
+; Total combinational functions               ; 620           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 275           ;
+;     -- 3 input functions                    ; 110           ;
+;     -- <=2 input functions                  ; 235           ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 620           ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 684           ;
+;     -- Dedicated logic registers            ; 684           ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 144           ;
+; Total memory bits                           ; 20480         ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+; Maximum fan-out node                        ; osc_clk~input ;
+; Maximum fan-out                             ; 764           ;
+; Total fan-out                               ; 5985          ;
+; Average fan-out                             ; 3.58          ;
++---------------------------------------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                          ;
++-----------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+-------------------------------+
+; Name                                                                                                      ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                           ;
++-----------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+-------------------------------+
+; operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM       ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|subBytes:sub|rom:mem1|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM       ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM       ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM       ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|subBytes:sub|rom:mem4|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM       ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM       ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM       ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
+; operational:po|subBytes:sub|rom:mem7|altsyncram:rom_rtl_0|altsyncram_tin1:auto_generated|ALTSYNCRAM       ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes.ram0_rom_1d582.hdl.mif ;
++-----------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+-------------------------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Partition Merge
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Nov 18 16:14:18 2019
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off aes -c aes --merge=on
+Info (35007): Using synthesis netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_10"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_2"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_3"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_4"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_5"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_6"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_7"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_8"
+Info (35007): Using synthesis netlist for partition "altsyncram:rom_rtl_0_9"
+Info (35002): Resolved and merged 11 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (35047): Found 340 ports with no fan-out. For more information, refer to the Partition Merger report
+Warning (35016): Found partition port(s) not driving logic, possibly wasting area
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|eccstatus[2]", driven by node "operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|eccstatus[1]", driven by node "operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|eccstatus[0]", driven by node "operational:po|subBytes:sub|rom:mem5|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|eccstatus[2]", driven by node "operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|eccstatus[1]", driven by node "operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|eccstatus[0]", driven by node "operational:po|subBytes:sub|rom:mem2|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|eccstatus[2]", driven by node "operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|eccstatus[1]", driven by node "operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|eccstatus[0]", driven by node "operational:po|roundKeyGen:keyGen|rom:mem1|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|eccstatus[2]", driven by node "operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|eccstatus[1]", driven by node "operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|eccstatus[0]", driven by node "operational:po|subBytes:sub|rom:mem3|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|eccstatus[2]", driven by node "operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|eccstatus[1]", driven by node "operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|eccstatus[0]", driven by node "operational:po|subBytes:sub|rom:mem0|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|eccstatus[2]", driven by node "operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|eccstatus[1]", driven by node "operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|eccstatus[0]", driven by node "operational:po|roundKeyGen:keyGen|rom:mem0|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|eccstatus[2]", driven by node "operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35018): Partition port "operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|eccstatus[1]", driven by node "operational:po|subBytes:sub|rom:mem6|altsyncram:rom_rtl_0|~GND", does not drive logic
+    Warning (35039): Only the first 20 ports are reported. For a full list of ports, refer to the Partition Warnings panel in the Partition Merge report
+Info (21057): Implemented 1100 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 142 output pins
+    Info (21061): Implemented 876 logic cells
+    Info (21064): Implemented 80 RAM segments
+Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4590 megabytes
+    Info: Processing ended: Mon Nov 18 16:14:20 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

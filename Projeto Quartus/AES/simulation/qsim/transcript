@@ -1,0 +1,54 @@
+# do aes.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module aes
+# -- Compiling module altsyncram_1
+# -- Compiling module altsyncram_2
+# -- Compiling module altsyncram_3
+# -- Compiling module altsyncram_4
+# -- Compiling module altsyncram_5
+# -- Compiling module altsyncram_6
+# -- Compiling module altsyncram_7
+# -- Compiling module altsyncram_8
+# -- Compiling module altsyncram_9
+# -- Compiling module altsyncram_10
+# 
+# Top level modules:
+# 	aes
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module aes_vlg_sample_tst
+# -- Compiling module aes_vlg_check_tst
+# -- Compiling module aes_vlg_vec_tst
+# 
+# Top level modules:
+# 	aes_vlg_vec_tst
+# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.aes_vlg_vec_tst 
+# Loading work.aes_vlg_vec_tst
+# Loading work.aes
+# Loading work.altsyncram_10
+# Loading cycloneiii_ver.cycloneiii_ram_block
+# Loading cycloneiii_ver.cycloneiii_ram_register
+# Loading cycloneiii_ver.cycloneiii_ram_pulse_generator
+# Loading cycloneiii_ver.cycloneiii_lcell_comb
+# Loading work.altsyncram_7
+# Loading work.altsyncram_4
+# Loading work.altsyncram_9
+# Loading work.altsyncram_1
+# Loading work.altsyncram_3
+# Loading work.altsyncram_6
+# Loading work.altsyncram_2
+# Loading work.altsyncram_5
+# Loading work.altsyncram_8
+# Loading altera_ver.dffeas
+# Loading cycloneiii_ver.cycloneiii_io_obuf
+# Loading cycloneiii_ver.cycloneiii_io_ibuf
+# Loading cycloneiii_ver.cycloneiii_clkctrl
+# Loading cycloneiii_ver.cycloneiii_mux41
+# Loading cycloneiii_ver.cycloneiii_ena_reg
+# Loading work.aes_vlg_sample_tst
+# Loading work.aes_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# Simulation passed !
+# ** Note: $finish    : aes.vt(2766)
+#    Time: 1 us  Iteration: 0  Instance: /aes_vlg_vec_tst/tb_out

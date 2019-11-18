@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity roundKeyGen is
+	port(
+		roundkey_in : in std_logic_vector(127 downto 0);
+		round : in std_logic_vector (3 downto 0);
+		roundkey_out : out std_logic_vector(127 downto 0);
+	);
+end entity;
+
+architecture rtl of roundKeyGen is
+	signal b0, b1, b2, b3, r0, r1, r2, r3 : std_logic_vector (7 downto 0);
+	
+	component rom is
+		port (
+			clk		: in std_logic;
+			addr1	   : in std_logic_vector(7 downto 0);
+			addr2	   : in std_logic_vector(7 downto 0);
+			q1		   : out std_logic_vector(7 downto 0);
+			q2		   : out std_logic_vector(7 downto 0)
+		);
+	end component;
+begin
+	b0 <= roundkey(31 downto 24);
+	b1 <= roundkey(23 downto 16);
+	b2 <= roundkey(15 downto 8);
+	b3 <= roundkey(7 downto 0);
+	
+	mem0 : rom 
+		port map( clk => clk_sub, addr1 => b1, addr2 => b2, q1 => r1, q2 => r2 );
+	
+	mem1 : rom 
+		port map( clk => clk_sub, addr1 => b3, addr2 => b0, q1 => r3, q2 => r0 );
+	
+	
+	roundkey_out(127 downto 120) <= r1 xor "00000001" xor roundkey_in(127 downto 120);
+	roundkey_out(119 downto 112) <= r2 xor roundkey_in(119 downto 112);
+	roundkey_out(111 downto 104) <= r3 xor roundkey_in(111 downto 104);
+	roundkey_out(103 downto 96)  <= r4 xor roundkey_in(103 downto 96);
+	roundkey_out(95 downto 64)   <= roundkey_out(127 downto 96) xor roundkey_in(95 downto 64);
+	roundkey_out(63 downto 32)   <= roundkey_out(95 downto 64) xor roundkey_in(63 downto 32);
+	roundkey_out(31 downto 0)    <= roundkey_out(63 downto 32) xor roundkey_in(31 downto 0);
+	
+	
+end rtl;

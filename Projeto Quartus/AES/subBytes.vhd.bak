@@ -1,0 +1,67 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity subBytes is
+	port(
+		state_in: in std_logic_vector(31 downto 0);
+		clk_sub : in std_logic;
+		state_out: out std_logic_vector(31 downto 0)
+	);
+end entity;
+
+architecture rtl of subBytes is 
+	signal s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16 : std_logic_vector(7 downto 0);
+	signal r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16 : std_logic_vector(7 downto 0);
+	component rom is
+		port (
+			clk		: in std_logic;
+			addr1	   : in std_logic_vector(7 downto 0);
+			addr2	   : in std_logic_vector(7 downto 0);
+			q1		   : out std_logic_vector(7 downto 0);
+			q2		   : out std_logic_vector(7 downto 0)
+		);
+	end component;
+begin
+	mem0 : rom 
+		port map( clk => clk_sub, addr1 => s1, addr2 => s2, q1 => r1, q2 => r2 );
+	
+	mem1 : rom 
+		port map( clk => clk_sub, addr1 => s3, addr2 => s4, q1 => r3, q2 => r4 );
+	
+	mem2 : rom 
+		port map( clk => clk_sub, addr1 => s5, addr2 => s6, q1 => r5, q2 => r6 );
+	
+	mem3 : rom 
+		port map( clk => clk_sub, addr1 => s7, addr2 => s8, q1 => r7, q2 => r8 );
+	
+	mem4 : rom 
+		port map( clk => clk_sub, addr1 => s9, addr2 => s10, q1 => r9, q2 => r10 );
+	
+	mem5 : rom 
+		port map( clk => clk_sub, addr1 => s11, addr2 => s12, q1 => r11, q2 => r12 );
+	
+	mem6 : rom 
+		port map( clk => clk_sub, addr1 => s13, addr2 => s14, q1 => r13, q2 => r14 );
+	
+	mem7 : rom 
+		port map( clk => clk_sub, addr1 => s15, addr2 => s16, q1 => r15, q2 => r16 );
+	
+	s1  <= state_in(127 downto 120);
+	s2  <= state_in(119 downto 112);
+	s3  <= state_in(111 downto 104);
+	s4  <= state_in(103 downto 96);
+	s5  <= state_in(95 downto 88);
+	s6  <= state_in(87 downto 80);
+	s7  <= state_in(79 downto 72);
+	s8  <= state_in(71 downto 64);
+	s9  <= state_in(63 downto 56);
+	s10 <= state_in(55 downto 48);
+	s11 <= state_in(47 downto 40);
+	s12 <= state_in(39 downto 32);
+	s13 <= state_in(31 downto 24);
+	s14 <= state_in(23 downto 16);
+	s15 <= state_in(15 downto 8);
+	s16 <= state_in(7 downto 0);
+		
+	state_out <= r1&r2&r3&r4&r5&r6&r7&r8&r9&r10&r11&r12&r13&r14&r15&r16;
+end rtl;

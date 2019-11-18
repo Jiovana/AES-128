@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity key_mux is
+	port 
+	(
+		round  : in std_logic_vector(3 downto 0);
+		result : out std_logic_vector (7 downto 0)
+	);
+
+end entity;
+
+architecture rtl of key_mux is
+begin
+	with round select
+	result <= "00000001" when "0001",
+				 "00000010" when "0010",
+				 "00000100" when "0011",
+				 "00001000" when "0100",
+				 "00010000" when "0101",
+				 "00100000" when "0110",
+				 "01000000" when "0111",
+				 "10000000" when "1000",
+				 "00011011" when "1001",
+				 "00110110" when "1010",
+				 "00000000" when others;
+				 
+
+end rtlBSN;

@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+package aes is
+	function sbox (in : std_logic_vector(7 downto 0)) return std_logic_vector(7 downto 0);
+	function inv_sbox (in : std_logic_vector(7 downto 0)) return std_logic_vector(7 downto 0);
+	function sub_bytes (state : std_logic_vector(127 downto 0)) return std_logic_vector(127 downto 0);
+	function inv_sub_bytes (state : std_logic_vector(127 downto 0)) return std_logic_vector(127 downto 0);
+	function shift_rows (state : std_logic_vector(127 downto 0)) return std_logic_vector(127 downto 0);
+	function inv_shift_rows (state : std_logic_vector(127 downto 0)) return std_logic_vector(127 downto 0);
+	function mix_columns (state : std_logic_vector(127 downto 0)) return std_logic_vector(127 downto 0);
+	function inv_mix_columns(state : std_logic_vector(127 downto 0)) return std_logic_vector(127 downto 0);
+	function add_round_key (state, roundkey : std_logic_vector(127 downto 0)) return std_logic_vector(127 downto 0);
+	function generate_round_key(roundkey : std_logic_vector(127 downto 0), round : integer range 0 to 12) return std_logic_vector(127 downto 0);
+end package aes;
+
+package body aes is
+
+
+	
+end package body aes;
